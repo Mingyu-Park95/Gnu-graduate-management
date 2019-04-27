@@ -1,0 +1,7 @@
+service apache2 start
+service apache2 restart
+service apache2 stop   
+
+
+루트 
+mysql 비밀번호 : alsrb123
