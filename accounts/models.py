@@ -13,6 +13,7 @@ class TakeList(models.Model):
     takeListUserName = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     classification = models.CharField(max_length=10)
     lectureNumber = models.CharField(max_length=10)
-    lectureName = models.CharField(max_length=10)
+    lectureName = models.CharField(max_length=20)
     lecturePoint = models.IntegerField(default=0)
     grade = models.CharField(max_length=2)
+
