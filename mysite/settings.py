@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'about_graduate',
-        'USER': 'alsrb123',
-        'PASSWORD': 'alsrb123',
-        'HOST': '127.0.0.1',
+        'NAME': 'gusdn',
+        'USER': 'gusdn',
+        'PASSWORD': 'gusdn',
+        'HOST': 'graduate.iptime.org',
         'PORT': '3306'
     }
 }
