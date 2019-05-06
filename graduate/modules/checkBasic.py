@@ -26,9 +26,10 @@ def checkBasic(userName, studentId, studentMajor):
 
     # 고정과목 = 외국여영역중 택1이 아닌 과목명으로 제한된 과목
     # 고정 과목리스트 받기 / 학과의 전공에따라 DB에서 가져온다. 고로 if문이 필요없고
-    # 기초교양의 고정과목이 바뀌어도 로직은 그대로 DB만 수정해주면 된다.
+    # 기초교양의 고정과목이 바뀌어도 로직은 그대로, DB만 수정해주면 된다.
     for compareBasic in basic.objects.filter(Department=studentMajor):
         compareBasicNameList.append(compareBasic.Lecture_Name)
+
 
     for userBasicName in userBasicNameList:
         if userBasicName in compareBasicNameList:
@@ -39,26 +40,33 @@ def checkBasic(userName, studentId, studentMajor):
 
     # 외국어 영역 처리 경영학과 따로 구분하기 얘는 DB에서 처리 못해
     if foreign == 0:
-        if studentMajor != '경영학과':
+        if studentMajor == '경영학과':
             notTakeList.append('외국어 영역 2과목 부족')
         else:
             notTakeList.append('외국어 영역 1과목 부족')
     elif foreign ==1:
-        if studentMajor != '경영학과':
+        if studentMajor == '경영학과':
             notTakeList.append('외국어 영역 1과목 부족')
         else:
             takeList.append('외국어 영역 완료')
-    elif foreign > 2:
+    elif foreign >= 2:
             takeList.append('외국어 영역 완료')
 
     # 경영학과 인문사회 영역 처리
     if studentMajor == '경영학과':
         if humanAndSocial == 0:
-            notTakeList.append('인문사회영역 2과목 부족')
+            notTakeList.append('인문사회영역 5과목 부족')
         elif humanAndSocial == 1:
+            notTakeList.append('인문사회영역 4과목 부족')
+        elif humanAndSocial == 2:
+            notTakeList.append('인문사회영역 3과목 부족')
+        elif humanAndSocial == 3:
+            notTakeList.append('인문사회영역 2과목 부족')
+        elif humanAndSocial == 4:
             notTakeList.append('인문사회영역 1과목 부족')
-        elif humanAndSocial > 2:
-            takeList.append('인문사회영역 완료')
+        elif humanAndSocial >= 5:
+            takeList.append('인문사회영역 5과목 이수')
+
 
     # 다중 리턴
     return notTakeList, takeList

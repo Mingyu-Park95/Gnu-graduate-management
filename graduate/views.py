@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
 # 모듈 가져오기
+from graduate.modules.checkpioneer import checkDream, checkPioneer
 from graduate.modules.makeTakeList import makeTakeList
 from graduate.modules.checkBasic import checkBasic
 
@@ -32,8 +33,17 @@ def upload_file(request):
             fp.close()
 
             makeTakeList(request)
-            notTakeList, takeList =checkBasic(userName, studentId, studentMajor)
-
-            return ready_upload(request)
+            BasicnotTakeList, BasicTakeList = checkBasic(userName, studentId, studentMajor)
+            a = checkDream(userName, studentId, studentMajor)
+            b = checkPioneer(userName, studentId, studentMajor)
+            return HttpResponse(b)
     return HttpResponse('Failed to Upload File')
+#ready_upload(request)
 
+# 기초교양 확인
+# BasicnotTakeList=' '.join(BasicnotTakeList)
+# BasicTakeList=' '.join(BasicTakeList)
+# # print(BasicnotTakeList)
+# print(BasicTakeList)
+# dream = checkDream(userName, studentId, studentMajor)
+# return HttpResponse("안들은거"+BasicnotTakeList+"들은거"+BasicTakeList)
