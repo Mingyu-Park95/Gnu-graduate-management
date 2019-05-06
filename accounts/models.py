@@ -4,7 +4,7 @@ from django.db import models
 
 
 class CustomUser(AbstractUser):
-    username = models.CharField(max_length=20, unique=True, primary_key=True, validators=[RegexValidator(regex='^[a-zA-Z0-9]+$')])
+    username = models.CharField(max_length=20, unique=True, primary_key=True, validators=[RegexValidator(regex='^[a-zA-Z0-9]+$')], help_text='알파벳과 숫자만 입력 가능합니다.')
     studentId = models.IntegerField(default=2014)
     studentMajor = models.CharField(max_length=30)
 #  RegexValidator=['a-zA-Z0-9']
