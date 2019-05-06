@@ -21,6 +21,11 @@ class CustomUserCreationForm(forms.ModelForm):
         model = CustomUser
         fields = ['username', 'email', 'studentMajor', 'studentId']
 
+    def clean_password2(self):
+        cd = self.cleaned_data
+        if cd['password'] != cd['password2']:
+            raise forms.ValidationError('비밀번호가 일치하지 않습니다')
+        return cd['password2']
 
 class CustomUserChangeForm(forms.ModelForm):
 
