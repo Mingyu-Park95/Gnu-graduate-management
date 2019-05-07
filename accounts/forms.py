@@ -28,7 +28,18 @@ class CustomUserCreationForm(forms.ModelForm):
         return cd['password2']
 
 class CustomUserChangeForm(forms.ModelForm):
+    studentMajor = forms.ChoiceField(widget=forms.Select, choices=studentMajor, label='전공')
+    studentId = forms.ChoiceField(widget=forms.Select, choices=studentId, label='교육과정')
+    password = forms.CharField(label='password', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
 
     class Meta:
         model = CustomUser
-        fields = ['username', 'email']
+        exclude = ['username']
+        fields = ['email', 'studentMajor', 'studentId']
+
+    def clean_password2(self):
+        cd = self.cleaned_data
+        if cd['password'] != cd['password2']:
+            raise forms.ValidationError('비밀번호가 일치하지 않습니다')
+        return cd['password2']

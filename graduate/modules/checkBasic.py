@@ -21,8 +21,8 @@ def checkBasic(userName, studentId, studentMajor):
         # 외국어 영역을 위해 체크, elif의 경우 경영학과를 위해서 체크
         if userBasic.lectureNumber[3:4] == '1':
             foreign += 1
-        elif userBasic.lectureNumber[3:4] =='2':
-            humanAndSocial +=1
+        elif userBasic.lectureNumber[3:4] == '2':
+            humanAndSocial += 1
 
     # 고정과목 = 외국여영역중 택1이 아닌 과목명으로 제한된 과목
     # 고정 과목리스트 받기 / 학과의 전공에따라 DB에서 가져온다. 고로 if문이 필요없고
@@ -66,8 +66,6 @@ def checkBasic(userName, studentId, studentMajor):
             notTakeList.append('인문사회영역 1과목 부족')
         elif humanAndSocial >= 5:
             takeList.append('인문사회영역 5과목 이수')
-
-
     # 다중 리턴
     return notTakeList, takeList
 

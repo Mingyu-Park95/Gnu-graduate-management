@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}- 회원정보 변경 완료 Done{% endblock %}
+
+{% block content %}
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 panel panel-default">
+            <div class="alert alert-info">회원정보 변경 완료 {{new_user.username}}</div>
+            <a class="btn btn-info" href="/">Move to main</a>
+        </div>
+        <div class="col-md-2"></div>
+</div>
+{% endblock %}
