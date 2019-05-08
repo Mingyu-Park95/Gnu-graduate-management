@@ -45,11 +45,11 @@ def checkDream(userName, studentId, studentMajor):
         return '꿈미래 상담 이수필요 %s번 더 이수 필요' % (3-dreamCnt)
 
     # 14학년도 1학기 안들은 경우 2학점 인정, 3번 들어야됨
-    # elif max == 2 and studentId == 2014 and dreamCnt == 3:
+    # elif max == 2 and eduYear == 2014 and dreamCnt == 3:
     #     return '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s, 차감해야하는 학점 = %s' % (point, max, 0)
-    # elif max == 2 and studentId == 2014 and dreamCnt > 3:
+    # elif max == 2 and eduYear == 2014 and dreamCnt > 3:
     #     return '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s, 차감해야하는 학점 = %s' % (point, max, (point - max))
-    # elif max == 2 and studentId == 2014 and dreamCnt < 3:
+    # elif max == 2 and eduYear == 2014 and dreamCnt < 3:
     #     return '꿈미래 상담 이수필요 %s번 더 이수 필요' % (3 - dreamCnt)
 
     # 15학번부터 4번 들어야한다.

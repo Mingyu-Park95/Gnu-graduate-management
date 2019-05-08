@@ -5,8 +5,11 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     username = models.CharField(max_length=20, unique=True, primary_key=True, validators=[RegexValidator(regex='^[a-zA-Z0-9]+$')], help_text='알파벳과 숫자만 입력 가능합니다.')
-    studentId = models.IntegerField(default=2014)
+    eduYear = models.IntegerField(default=2014)
     studentMajor = models.CharField(max_length=30)
+    studentDoubleMajor = models.CharField(max_length=30, default=None, null=True)
+    studentTrack = models.CharField(max_length=30, default=None, null=True)
+    studentSubMajor = models.CharField(max_length=30, default=None, null=True)
 #  RegexValidator=['a-zA-Z0-9']
 
 

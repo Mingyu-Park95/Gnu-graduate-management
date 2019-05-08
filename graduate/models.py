@@ -3,10 +3,43 @@ from django.db import models
 # Create your models here.
 
 
-class basic(models.Model): # 기초교양
+class CapabilityList(models.Model): #  역량교양
+    eduYear  = models.IntegerField() # 교육과정
+    major = models.CharField(max_length=20) # 학과
+    lectureName = models.CharField(max_length=20) # 과목명
+    lectureNum = models.CharField(max_length=10) # 학수번호
+    lecturePoint = models.IntegerField() # 학점
 
-    Edu_Year = models.IntegerField()  # 교육과정
-    Department = models.CharField(max_length=20) # 학과
-    Lecture_Name = models.CharField(max_length=20) # 과목명
-    Lecture_Num = models.CharField(max_length=10) # 학수번호
-    Lecture_Point = models.IntegerField()  # 학점
+
+class BasicList(models.Model): # 기초교양
+    eduYear = models.IntegerField()  # 교육과정
+    major = models.CharField(max_length=20) # 학과
+    lectureName = models.CharField(max_length=20) # 과목명
+    lectureNum = models.CharField(max_length=10) # 학수번호
+    lecturePoint = models.IntegerField()  # 학점
+
+
+class IntegrationList(models.Model): # 통합교양
+    major = models.CharField(max_length=20) # 학과
+    lectureName = models.CharField(max_length=20) # 과목명
+    lectureNum = models.CharField(max_length=10) # 학수번호
+
+
+class PioneerList(models.Model):  # 개척교양
+    eduYear = models.IntegerField()  # 교육과정
+    major = models.CharField(max_length=20) # 학과
+    lectureName = models.CharField(max_length=20) # 과목명
+    lectureNum = models.CharField(max_length=10) # 학수번호
+    lecturePoint = models.IntegerField()  # 학점
+
+
+class Major(models.Model):
+    eduYear = models.IntegerField()  # 교육과정
+    major = models.CharField(max_length=20)  # 학과
+    majorPoint = models.FloatField()        # 전필
+    majorSelectPoint = models.FloatField()  # 전선
+    dmajorPoint = models.FloatField()       # 이필
+    dmajorSelectPoint = models.FloatField() # 이선
+    subMajorPoint = models.FloatField()     # 부전공
+
+# 필수로 들어야 하는 과목 음.......기초과정 고정과목처럼 처리하면 될 거 같은데

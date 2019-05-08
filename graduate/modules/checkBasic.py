@@ -1,5 +1,5 @@
 from django.db.models import Q
-from graduate.models import basic
+from graduate.models import BasicList
 from accounts.models import TakeList
 # 기초과정 확인
 # 외국어 영역 =>ZGA1 번으로 시작
@@ -27,7 +27,7 @@ def checkBasic(userName, studentId, studentMajor):
     # 고정과목 = 외국여영역중 택1이 아닌 과목명으로 제한된 과목
     # 고정 과목리스트 받기 / 학과의 전공에따라 DB에서 가져온다. 고로 if문이 필요없고
     # 기초교양의 고정과목이 바뀌어도 로직은 그대로, DB만 수정해주면 된다.
-    for compareBasic in basic.objects.filter(Department=studentMajor):
+    for compareBasic in BasicList.objects.filter(Department=studentMajor):
         compareBasicNameList.append(compareBasic.Lecture_Name)
 
 

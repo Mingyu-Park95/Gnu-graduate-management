@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gusdn',
+        'NAME': 'mingyu',
         'USER': 'gusdn',
         'PASSWORD': 'gusdn',
         'HOST': 'graduate.iptime.org',

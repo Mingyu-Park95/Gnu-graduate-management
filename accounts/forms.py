@@ -19,7 +19,7 @@ class CustomUserCreationForm(forms.ModelForm):
 
     class Meta:
         model = CustomUser
-        fields = ['username', 'email', 'studentMajor', 'studentId']
+        fields = ['username', 'email', 'studentMajor', 'eduYear']
 
     def clean_password2(self):
         cd = self.cleaned_data
@@ -36,7 +36,7 @@ class CustomUserChangeForm(forms.ModelForm):
     class Meta:
         model = CustomUser
         exclude = ['username']
-        fields = ['email', 'studentMajor', 'studentId']
+        fields = ['email', 'studentMajor', 'eduYear']
 
     def clean_password2(self):
         cd = self.cleaned_data
