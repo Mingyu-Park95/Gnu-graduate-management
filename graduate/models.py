@@ -33,7 +33,7 @@ class PioneerList(models.Model):  # 개척교양
     lecturePoint = models.IntegerField()  # 학점
 
 
-class Major(models.Model):
+class MajorPoint(models.Model):
     eduYear = models.IntegerField()  # 교육과정
     major = models.CharField(max_length=20)  # 학과
     majorPoint = models.FloatField()        # 전필
@@ -42,4 +42,12 @@ class Major(models.Model):
     dmajorSelectPoint = models.FloatField() # 이선
     subMajorPoint = models.FloatField()     # 부전공
 
+
+class ConvergenceMajor(models.Model):
+    eduYear = models.IntegerField()  # 교육과정
+    major = models.CharField(max_length=20)  # 학과
+    seperate = models.CharField(max_length=20) # 구분
+    dmajorName = models.CharField(max_length=20)  # 과목명
+    dmajornum = models.CharField(max_length=20)  # 학수번호
+    dmajorPoint = models.FloatField()  # 과목 학점
 # 필수로 들어야 하는 과목 음.......기초과정 고정과목처럼 처리하면 될 거 같은데

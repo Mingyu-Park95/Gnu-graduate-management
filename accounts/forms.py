@@ -7,19 +7,43 @@ from django.forms import CharField, SlugField
 
 from .models import CustomUser
 
-studentId = ((2014, 2014), (2015, 2015), (2016, 2016), (2017, 2017), (2018, 2018), (2019, 2019))
+eduYear = ((2014, 2014), (2015, 2015), (2016, 2016), (2017, 2017), (2018, 2018), (2019, 2019))
 studentMajor = (('경영정보학과', '경영정보학과'), ('경영학과', '경영학과'), ('국제통상학과', '국제통상학과'), ('회계학과', '회계학과'))
+studentDoubleMajor = (('해당없음', '해당없음'), ('경영정보학과', '경영정보학과'), ('경영학과', '경영학과'),
+                     ('국제통상학과', '국제통상학과'), ('회계학과', '회계학과'))
+studentTrack = (('해당없음', '해당없음'), ('경영정보트랙제', '경영정보트랙제'))
+studentSubMajor = (('해당없음', '해당없음'), ('경영정보학과', '경영정보학과'), ('경영학과', '경영학과'),
+                     ('국제통상학과', '국제통상학과'), ('회계학과', '회계학과'))
+studentConvergenceMajor = (('해당없음', '해당없음'), ('융합전공이름1', '융합전공이름1'), ('경영학과', '경영학과'),
+                     ('국제통상학과', '국제통상학과'), ('회계학과', '회계학과'))
+studentTeaching = (('해당없음', '해당없음'), ('교직이수1', '교직이수1'), ('교직이수2', '교직이수2'),
+                     ('국제통상학과', '국제통상학과'), ('회계학과', '회계학과'))
+
+# studentDoubleMajor = models.CharField(max_length=30, default=None, null=True)
+#     studentTrack = models.CharField(max_length=30, default=None, null=True)
+#     studentSubMajor = models.CharField(max_length=30, default=None, null=True)
+#     studentConvergenceMajor = models.CharField(max_length=30, default=None, null=True)
+#     studentTeaching = models.CharField(max_length=30, default=None, null=True) # 교직이수
 
 
 class CustomUserCreationForm(forms.ModelForm):
     studentMajor = forms.ChoiceField(widget=forms.Select, choices=studentMajor, label='전공')
-    studentId = forms.ChoiceField(widget=forms.Select, choices=studentId, label='교육과정')
+    eduYear = forms.ChoiceField(widget=forms.Select, choices=eduYear, label='교육과정')
+
+    studentDoubleMajor = forms.ChoiceField(widget=forms.Select, choices=studentDoubleMajor, label='복수전공')
+    studentTrack = forms.ChoiceField(widget=forms.Select, choices=studentTrack, label='트랙제')
+    studentSubMajor = forms.ChoiceField(widget=forms.Select, choices=studentSubMajor, label='부전공')
+    studentConvergenceMajor = forms.ChoiceField(widget=forms.Select, choices=studentConvergenceMajor, label='융합전공')
+    studentTeaching = forms.ChoiceField(widget=forms.Select, choices=studentTeaching, label='교직이수')
+
     password = forms.CharField(label='password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
 
+
     class Meta:
         model = CustomUser
-        fields = ['username', 'email', 'studentMajor', 'eduYear']
+        fields = ['username', 'email', 'studentMajor', 'eduYear', 'studentDoubleMajor', 'studentTrack',
+                  'studentSubMajor', 'studentConvergenceMajor', 'studentTeaching']
 
     def clean_password2(self):
         cd = self.cleaned_data
@@ -27,16 +51,18 @@ class CustomUserCreationForm(forms.ModelForm):
             raise forms.ValidationError('비밀번호가 일치하지 않습니다')
         return cd['password2']
 
+
 class CustomUserChangeForm(forms.ModelForm):
     studentMajor = forms.ChoiceField(widget=forms.Select, choices=studentMajor, label='전공')
-    studentId = forms.ChoiceField(widget=forms.Select, choices=studentId, label='교육과정')
+    studentId = forms.ChoiceField(widget=forms.Select, choices=eduYear, label='교육과정')
     password = forms.CharField(label='password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
 
     class Meta:
         model = CustomUser
         exclude = ['username']
-        fields = ['email', 'studentMajor', 'eduYear']
+        fields = ['email', 'studentMajor', 'eduYear', 'studentDoubleMajor', 'studentTrack',
+                  'studentSubMajor', 'studentConvergenceMajor', 'studentTeaching']
 
     def clean_password2(self):
         cd = self.cleaned_data

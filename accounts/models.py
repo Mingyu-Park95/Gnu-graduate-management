@@ -10,6 +10,9 @@ class CustomUser(AbstractUser):
     studentDoubleMajor = models.CharField(max_length=30, default=None, null=True)
     studentTrack = models.CharField(max_length=30, default=None, null=True)
     studentSubMajor = models.CharField(max_length=30, default=None, null=True)
+    studentConvergenceMajor = models.CharField(max_length=30, default=None, null=True)
+    studentTeaching = models.CharField(max_length=30, default=None, null=True) # 교직이수
+    # 융합전공 추가하기
 #  RegexValidator=['a-zA-Z0-9']
 
 
