@@ -29,7 +29,7 @@ SECRET_KEY = 'vlv789hm6nth!9=z^qa**k0!#x%%(i)rlnx=(ug2u^%i@%g_ia'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['graduate.iptime.org']
 
 
 # Application definition
@@ -129,6 +129,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ㅇ 커스텀 모델 사용하기
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
