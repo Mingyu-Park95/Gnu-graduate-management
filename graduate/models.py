@@ -68,4 +68,25 @@ class Track(models.Model):
     lectureName = models.CharField(max_length=20)  # 과목명
     lectureNum = models.CharField(max_length=20)  # 트랙기본
     lecturePoint = models.FloatField()  # 과목 학점
+
+class EduBasic(models.Model):
+
+    major = models.CharField(max_length=20)  # 학과
+
+    lectureNum = models.CharField(max_length=10)  # 학수번호
+
+    lectureName = models.CharField(max_length=20)  # 과목명
+    lecturePoint = models.IntegerField()  # 학점
+
+class EduTeach(models.Model):
+    major = models.CharField(max_length=20)  # 학과
+    lectureNum = models.CharField(max_length=10)  # 학수번호
+    lectureName = models.CharField(max_length=20)  # 과목명
+    lecturePoint = models.IntegerField()  # 학점
+
+class EduCareer(models.Model):
+    classification = models.CharField(max_length=10) # 과목영역별 분류
+    lectureNum = models.CharField(max_length=10)  # 학수번호
+    lectureName = models.CharField(max_length=20)  # 과목명
+    lecturePoint = models.IntegerField()  # 학점
 # 필수로 들어야 하는 과목 음.......기초과정 고정과목처럼 처리하면 될 거 같은데
