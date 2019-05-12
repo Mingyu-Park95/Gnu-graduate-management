@@ -29,7 +29,7 @@ SECRET_KEY = 'vlv789hm6nth!9=z^qa**k0!#x%%(i)rlnx=(ug2u^%i@%g_ia'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['graduate.iptime.org']
+ALLOWED_HOSTS = ['graduate.iptime.org','127.0.0.1']
 
 
 # Application definition

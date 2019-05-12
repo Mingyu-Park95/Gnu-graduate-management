@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
 # 모듈 가져오기
-from graduate.modules.checkMajor import checkMajor
+from graduate.modules.checkDoubleMajor import checkMajor
 from graduate.modules.checkpioneer import checkDream, checkPioneer
 from graduate.modules.judgeData import Integration_Judge
 from graduate.modules.makeTakeList import makeTakeList
@@ -40,12 +40,12 @@ def upload_file(request):
             # BasicnotTakeList, BasicTakeList = checkBasic(userName, eduYear, studentMajor)
             # a = checkDream(userName, eduYear, studentMajor)
             # b = checkPioneer(userName, eduYear, studentMajor, studentDoubleMajor)
-            c = checkMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
+            # c = checkMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
 
             # 현우가 테스트하는 부분
             # return_value = Capability_Judge(user_name,user_num,user_major)
-            return_value = Integration_Judge(userName, eduYear, studentMajor)
-            return HttpResponse(return_value)
+            # return_value = Integration_Judge(userName, eduYear, studentMajor)
+            return HttpResponse('완료')
     return HttpResponse('Failed to Upload File')
 
 

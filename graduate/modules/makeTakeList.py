@@ -1,7 +1,9 @@
 import xlrd
 import xlwt
 from collections import OrderedDict  # 중첩된 값 제거
-from accounts.models import TakeList, CustomUser, TakeListPoint
+from accounts.models import TakeList, CustomUser, TakeListPoint, GradeByPeriod
+
+
 # 불러오는 과정
 
 
@@ -13,6 +15,9 @@ def makeTakeList(request):
     # 수강 기록에 대한 학점을 DB에서 삭제
     fordel = TakeListPoint.objects.filter(TakeListPointUserName=request.user.username)
     fordel.delete()
+    fordel = GradeByPeriod.objects.filter(gradeByPeriodName=request.user.username)
+    fordel.delete()
+
     wb = xlrd.open_workbook('a/%s' % request.user.username)
     ws = wb.sheet_by_index(0)
     ncol = ws.ncols
@@ -25,12 +30,13 @@ def makeTakeList(request):
     i = 6
     j = 1
     low = []
+    tmpStr = ''
+    forTimeList = []
     list2 = []
     while i < nlow:
         while j <= 12:
             # 각 문자열의 모든 공백 제거
             a = str(ws.row_values(i)[j])
-
             a = a.replace(" ", "")
             a = a.strip()
             low.append(a)
@@ -46,6 +52,19 @@ def makeTakeList(request):
             low[3] = float(low[3])  # 학점을 스트링에서 float 형으로 변환
             list2.append(low)
 
+        elif len(low) > 0 and low[0] != '구분' and low[0] != '신청' and len(low[0]) < 60:
+            if len(low[0]) >= 20:
+                tmpStr = low[0][0:7] + " " + low[0][10:13] + " " + low[0][7:10]
+                # print(tmpStr)
+                forTimeList.append(tmpStr)
+            if len(low[0]) < 20:
+                tmpStr = low[0][0:7] + " " + low[0][7:13]
+                # print(tmpStr)
+                forTimeList.append(tmpStr)
+        elif len(low) > 0 and low[0] == '신청':
+            # print(low[6])
+            forTimeList.append(low[6])
+
         low = []
         i += 1
         j = 1
@@ -53,9 +72,9 @@ def makeTakeList(request):
     i = 6
     j = 13
 
-    print(nlow)
+
     while i < nlow:
-        while j <= 23:
+        while j <= 25:
             # 각 문자열의 모든 공백 제거
             a = str(ws.row_values(i)[j])
             a = a.replace(" ", "")
@@ -68,12 +87,72 @@ def makeTakeList(request):
         low.remove("")
 
         if len(low) > 2 and low[0] != '신청' and low[0] != '구분':
-            low[3] = float(low[3])
+            low[3] = float(low[3])  # 학점을 스트링에서 float 형으로 변환
             list2.append(low)
-            # print(low)
+
+        elif len(low) > 0 and low[0] != '구분' and low[0] != '신청' and len(low[0]) < 60:
+            if len(low[0]) >= 20:
+                tmpStr = low[0][0:7] + " " + low[0][10:13] + " " + low[0][7:10]
+                # print(tmpStr)
+                forTimeList.append(tmpStr)
+            if len(low[0]) < 20:
+                tmpStr = low[0][0:7] + " " + low[0][7:13]
+                # print(tmpStr)
+                forTimeList.append(tmpStr)
+        elif len(low) > 0 and low[0] == '신청':
+            # print(low[6])
+            forTimeList.append(low[6])
         low = []
         i += 1
         j = 13
+
+    i = 6
+    j = 26
+    while i < nlow:
+        while j <= 31:
+            # 각 문자열의 모든 공백 제거
+            a = str(ws.row_values(i)[j])
+
+            a = a.replace(" ", "")
+            a = a.strip()
+
+            low.append(a)
+
+            j += 1
+
+        low = list(OrderedDict.fromkeys(low))
+        # print(low)
+        low.remove("")
+
+        if len(low) > 2 and low[0] != '신청' and low[0] != '구분':
+            low[3] = float(low[3])  # 학점을 스트링에서 float 형으로 변환
+            list2.append(low)
+
+        elif len(low) > 0 and low[0] != '구분' and low[0] != '신청' and len(low[0]) < 60:
+            if len(low[0]) >= 20:
+                tmpStr = low[0][0:7] + " " + low[0][10:13] + " " + low[0][7:10]
+                # print(tmpStr)
+                forTimeList.append(tmpStr)
+            if len(low[0]) < 20:
+                tmpStr = low[0][0:7] + " " + low[0][7:13]
+                # print(tmpStr)
+                forTimeList.append(tmpStr)
+        elif len(low) > 0 and low[0] == '신청':
+            # print(low[6])
+            forTimeList.append(low[6])
+        low = []
+        i += 1
+        j = 26
+    forTimeList.pop()
+    print(forTimeList)
+
+    iter = len(forTimeList)//2
+    for i in range(iter):
+        gradeByPeriod = GradeByPeriod()
+        gradeByPeriod.gradeByPeriodName = CustomUser.objects.get(pk=request.user.username)
+        gradeByPeriod.period = forTimeList[2*i]
+        gradeByPeriod.grade = forTimeList[2*i+1]
+        gradeByPeriod.save()
 
     # 새로운 엑셀 파일 생성
     workbook = xlwt.Workbook()

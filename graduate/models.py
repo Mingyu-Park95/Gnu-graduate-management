@@ -72,7 +72,7 @@ class Track(models.Model):
 class EduBasic(models.Model):
 
     major = models.CharField(max_length=20)  # 학과
-
+    eduYear = models.IntegerField(default=1) #
     lectureNum = models.CharField(max_length=10)  # 학수번호
 
     lectureName = models.CharField(max_length=20)  # 과목명
