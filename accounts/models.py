@@ -17,7 +17,7 @@ class CustomUser(AbstractUser):
 
 
 class TakeList(models.Model):
-    takeListUserName = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    takeListUserName = models.CharField(max_length=20)
     classification = models.CharField(max_length=10)
     lectureNumber = models.CharField(max_length=10)
     lectureName = models.CharField(max_length=40)
@@ -26,7 +26,7 @@ class TakeList(models.Model):
     addedCustom = models.BooleanField(default=False)
 
 class TakeListPoint(models.Model):
-    TakeListPointUserName = models.OneToOneField(CustomUser,  on_delete=models.CASCADE)
+    takeListPointUserName = models.CharField(max_length=20)
     capability = models.FloatField(verbose_name='역량학점')
     integration = models.FloatField(verbose_name='통합학점')
     basic = models.FloatField(verbose_name='기초학점')
@@ -39,7 +39,7 @@ class TakeListPoint(models.Model):
     total = models.FloatField(verbose_name='전체학점')
 
 class GradeByPeriod(models.Model):
-    gradeByPeriodName =models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    gradeByPeriodName =models.CharField(max_length=20)
     period = models.CharField(max_length=30)
     grade = models.FloatField()
 

@@ -16,7 +16,6 @@ def checkMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMa
             majorResult = '전필을 %s학점 더 들어야 합니다.' % (majorPointChecker.majorPoint - userMajorPoint.major)
         else:
             majorResult = '전필을 모두 이수하였습니다. 이수학점 = %s' % userMajorPoint.major
-
         #####
         if majorPointChecker.majorSelectPoint > userMajorPoint.majorSelect:
             majorResult += '전선을 %s학점 더 들어야 합니다.' % (majorPointChecker.majorSelectPoint - userMajorPoint.majorSelect)

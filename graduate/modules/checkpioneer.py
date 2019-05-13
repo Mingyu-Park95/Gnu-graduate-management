@@ -13,7 +13,7 @@ from django.db.models import Q
 from accounts.models import TakeList
 
 
-def checkDream(userName, studentId, studentMajor):
+def checkDream(userName, eduYear, studentMajor):
     max = 0
     point = 0
     dreamCnt = 0
@@ -62,12 +62,12 @@ def checkDream(userName, studentId, studentMajor):
 # 17학번 이후 개척 교양 => 과목2개 학점 4학점 채워야 됨
 # 나중에 생각하자
 
-def checkPioneer(userName, studentId, studentMajor):
+def checkPioneer(userName, eduYear, studentMajor):
 
     userPioneerList = []
     requiredPoint = 4
     point = 0
-    if studentId < 2017:
+    if eduYear < 2017:
         return '2017년도 교육과정 이전 대상자는 해당 되지 않습니다.'
 
     # Q(takeListUserName=userName) & Q(classification='개교')

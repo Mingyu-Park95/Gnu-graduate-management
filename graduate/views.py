@@ -4,13 +4,25 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from accounts.models import TakeList, CustomUser
-# 모듈 가져오기
 from graduate.models import LectureList
-from graduate.modules.checkDoubleMajor import checkMajor
-from graduate.modules.checkpioneer import checkDream, checkPioneer
-from graduate.modules.judgeData import Integration_Judge
+# 모듈 가져오기
+from graduate.modules.checkMajor import checkMajor
+
 from graduate.modules.makeTakeList import makeTakeList
 from graduate.modules.checkBasic import checkBasic
+from graduate.modules.checkDoubleMajor import checkDobuleMajor
+from graduate.modules.checkpioneer import checkDream, checkPioneer
+from graduate.modules.judgeData import Integration_Judge
+from graduate.modules.judgeData import Integration_Judge
+from graduate.modules.judgeData import Capability_Judge
+from graduate.modules.judgeConvergence import convergenceMajor_Judge
+from graduate.modules.track_IT import ITtrack_Judge
+from graduate.modules.track_Finance import financeTrack_Judge
+from graduate.modules.track_Account import accountTrack_Judge
+from graduate.modules.track_Channel import channelTrack_Judge
+from graduate.modules.edu_Career import edu_Career_Judge
+from graduate.modules.edu_Teach import edu_Teach_Judge
+from graduate.modules.edu_Basic import edu_Basic_Judge
 
 def ready_upload(request):
     if request.user.is_authenticated:
@@ -31,22 +43,72 @@ def upload_file(request):
             studentMajor = request.user.studentMajor
             studentSubMajor = request.user.studentSubMajor
             studentDoubleMajor = request.user.studentDoubleMajor
+            studentConvergence =request.user.studentConvergenceMajor
+            studentTrack = request.user.studentTrack
+            studentTeaching = request.user.studentTeaching
+
             filename = userName
             fp = open('%s/%s' % ('a', filename) , 'wb')
             for chunk in file.chunks():
                 fp.write(chunk)
             fp.close()
-
             makeTakeList(request)
-            # 내가 테스트하는 부분
-            # BasicnotTakeList, BasicTakeList = checkBasic(userName, eduYear, studentMajor)
-            # a = checkDream(userName, eduYear, studentMajor)
-            # b = checkPioneer(userName, eduYear, studentMajor, studentDoubleMajor)
-            # c = checkMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
 
-            # 현우가 테스트하는 부분
-            # return_value = Capability_Judge(user_name,user_num,user_major)
-            # return_value = Integration_Judge(userName, eduYear, studentMajor)
+
+            # 내가 테스트하는 부분
+            basicNotTakeList, basicTakeList = checkBasic(userName, eduYear, studentMajor)
+            dream = checkDream(userName, eduYear, studentMajor)
+            pioneer = checkPioneer(userName, eduYear, studentMajor)
+
+            # 단일전공, 복수전공 if
+            if studentDoubleMajor!='해당없음':
+                majorResult, MustTakeList, userMustTakeList = checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
+            else:
+                soloMajor = checkMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
+
+            Capability = Capability_Judge(userName,eduYear,studentMajor)
+            Integration = Integration_Judge(userName, eduYear, studentMajor)
+
+            if studentConvergence =='산업경영지원학':
+                convergenceMajor = convergenceMajor_Judge(userName, eduYear, studentMajor)
+
+            if studentTrack =='재무금융트랙':
+                financeTrack = financeTrack_Judge(userName, eduYear, studentMajor)
+            elif studentTrack =='세무전문트랙':
+                accountTrack = accountTrack_Judge(userName, eduYear, studentMajor)
+            elif studentTrack =='유통서비스트랙':
+                channelTrack = channelTrack_Judge(userName, eduYear, studentMajor)
+            elif studentTrack == 'IT융합시스템개발':
+                ITtrack = ITtrack_Judge(userName, eduYear, studentMajor)
+
+            if studentTeaching =='해당':
+                edu_Basic = edu_Basic_Judge(userName, eduYear, studentMajor)
+                edu_Teach = edu_Teach_Judge(userName, eduYear, studentMajor)
+                edu_Career = edu_Career_Judge(userName, eduYear, studentMajor)
+
+            print(basicNotTakeList)
+            print(basicTakeList)
+            print(dream)
+            print('개척'+pioneer)
+            print('복수전공')
+            print(majorResult)
+            print('반드시들어야하는과목')
+            print(MustTakeList)
+            print('유저가 들은 과목')
+            print(userMustTakeList)
+            print('단일전공')
+            # print(soloMajor)
+            print(Capability)
+            print(Integration)
+            print(convergenceMajor)
+            #print(financeTrack)
+            #print(accountTrack)
+            #print(channelTrack)
+            print(ITtrack)
+            #print(edu_Basic)
+            #print(edu_Teach)
+            #print(edu_Career)
+
 
             return render(request, 'graduate/result.html')
     return HttpResponse('Failed to Upload File')

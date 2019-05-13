@@ -13,7 +13,7 @@ def makeTakeList(request):
     fordel = TakeList.objects.filter(takeListUserName=request.user.username)
     fordel.delete()
     # 수강 기록에 대한 학점을 DB에서 삭제
-    fordel = TakeListPoint.objects.filter(TakeListPointUserName=request.user.username)
+    fordel = TakeListPoint.objects.filter(takeListPointUserName=request.user.username)
     fordel.delete()
     fordel = GradeByPeriod.objects.filter(gradeByPeriodName=request.user.username)
     fordel.delete()
@@ -206,7 +206,7 @@ def makeTakeList(request):
         takelist.save()
 
     takelistpoint = TakeListPoint()
-    takelistpoint.TakeListPointUserName = CustomUser.objects.get(pk=request.user.username)
+    takelistpoint.takeListPointUserName = CustomUser.objects.get(pk=request.user.username)
     takelistpoint.capability = capability
     takelistpoint.integration = integration
     takelistpoint.basic = basic
