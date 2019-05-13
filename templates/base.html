@@ -21,11 +21,15 @@
                 {% if user.is_authenticated %}
                 <li class="nav-item"><a href="#" class="nav-link">반갑습니다. {{user.get_username}}님!</a></li>
                 <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">로그아웃</a></li>
-                 <li class="nav-item"><a href="{% url 'userChange' %}" class="nav-link">회원 정보 변경</a></li>
+                <li class="nav-item"><a href="{% url 'userChange' %}" class="nav-link">회원 정보 변경</a></li>
+                <li class="nav-item"><a href="/graduate/change" class="nav-link">과목수정</a></li>
                 {% else %}
 
                 <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">로그인</a></li>
                 <li class="nav-item"><a href="{% url 'register' %}" class="nav-link">회원가입</a></li>
+
+
+
                 {% endif %}
             </ul>
         </nav>

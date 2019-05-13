@@ -23,7 +23,7 @@ class TakeList(models.Model):
     lectureName = models.CharField(max_length=40)
     lecturePoint = models.IntegerField(default=0)
     grade = models.CharField(max_length=2)
-
+    addedCustom = models.BooleanField(default=False)
 
 class TakeListPoint(models.Model):
     TakeListPointUserName = models.OneToOneField(CustomUser,  on_delete=models.CASCADE)
@@ -42,3 +42,6 @@ class GradeByPeriod(models.Model):
     gradeByPeriodName =models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     period = models.CharField(max_length=30)
     grade = models.FloatField()
+
+
+

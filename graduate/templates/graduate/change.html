@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="{% url 'graduate:change' %}" method="post">
+        <input type="text" name="searchText">
+        <input class="btn btn-primary" type="submit" value="Search">
+    </form>
+
+    <form action="{% url 'graduate:change' %}" method="post">
+    <table border = "1">
+        <tr>
+            <th colspan="5">검색결과</th>
+        </tr>
+        <tr>
+            <th>선택</th>
+            <th>구분</th>
+            <th>학수번호</th>
+            <th>과목명</th>
+            <th>학점</th>
+        </tr>
+        {% for lecture in lectureList %}
+        <tr>
+            <td><input type="checkbox" id="{{ lecture.id }}" name="check_name" value="{{ lecture.id }}" ></td>
+            <td><label for="{{ lecture.id }}">{{lecture.classification}}</label></td>
+            <td><label for="{{ lecture.id }}">{{lecture.lectureNumber}}</label></td>
+            <td><label for="{{ lecture.id }}">{{lecture.lectureName}}</label></td>
+            <td><label for="{{ lecture.id }}">{{lecture.lecturePoint}}</label></td>
+        </tr>
+        {% endfor %}
+    </table>
+        <input class="btn btn-primary" type="submit" value="추가">
+    </form>
+
+    <form action="{% url 'graduate:change' %}" method="post">
+        <table border = "1">
+            <tr>
+                <th colspan="5">추가한 목록</th>
+            </tr>
+            <tr>
+                <th>선택</th>
+                <th>구분</th>
+                <th>학수번호</th>
+                <th>과목명</th>
+                <th>학점</th>
+            </tr>
+            {% for Added in AddedList %}
+                 <tr>
+                     <td><input type="checkbox" id="{{ Added.id }}" name="delete" value="{{ Added.id }}"></td>
+                     <td><label for="{{ Added.id }}">{{Added.classification}}</label></td>
+                     <td><label for="{{ Added.id }}">{{Added.lectureNumber}}</label></td>
+                     <td><label for="{{ Added.id }}">{{Added.lectureName}}</label></td>
+                     <td><label for="{{ Added.id }}">{{Added.lecturePoint}}</label></td>
+                 </tr>
+            {% endfor %}
+        </table>
+        <input class="btn btn-primary" type="submit" value="삭제">
+    </form>
+
+
+
+</body>
+</html>

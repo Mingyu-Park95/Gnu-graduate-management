@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+from accounts.models import CustomUser
 
 
 class CapabilityList(models.Model): #  역량교양
@@ -90,3 +91,10 @@ class EduCareer(models.Model):
     lectureName = models.CharField(max_length=20)  # 과목명
     lecturePoint = models.IntegerField()  # 학점
 # 필수로 들어야 하는 과목 음.......기초과정 고정과목처럼 처리하면 될 거 같은데
+
+class LectureList(models.Model):
+    classification = models.CharField(max_length=10)
+    lectureNumber = models.CharField(max_length=10)
+    lectureName = models.CharField(max_length=40)
+    lecturePoint = models.IntegerField(default=0)
+    grade = models.CharField(max_length=2)
