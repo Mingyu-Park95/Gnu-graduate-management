@@ -25,3 +25,9 @@ def userChange(request):
     else:
         user_form = CustomUserChangeForm(instance=request.user)
     return render(request, 'registration/userChange.html', {'form': user_form})
+
+def main(request):
+    return render(request, 'registration/main.html')
+
+def manual(request):
+     return render(request, 'registration/manual.html')

@@ -6,11 +6,53 @@
 <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 panel panel-default">
-            <div class="alert alert-info">가입 정보를 입력해 주세요.</div>
-            <form action="" method="post">
-                {{form.as_p}}
+
+                <span class="login100-form-title p-t-50 p-b-51">Sign up</span> 
+
+
+            <form action="{% url 'accounts:register' %}" method="POST">
+
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="ID is required">
+                            <input class="input100" type="text" placeholder="ID" name="username" maxlength="20" required="" id="id_username">
+                            <span class="focus-input100"></span>
+                    </div>
+
+                    
+                    <div class="wrap-input100 validate-input m-b-16"data-validate = "Password is required">
+                            <input class="input100" type="password" placeholder="Password" name="password" required="" id="id_password">
+                            <span class="focus-input100"></span>
+                    </div>
+
+                             
+                    <div class="wrap-input100 validate-input m-b-16"data-validate = "Password is not same">
+                            <input class="input100" type="password" placeholder="Repeat Password" name="password2" required="" id="id_password2">
+                            <span class="focus-input100"></span>
+                    </div>
+
+
+
+                    <div class="wrap-input100 validate-input m-b-16"data-validate = "Valid email is required: ex@abc.xyz">
+                            <input class="input100" type="email" placeholder="E-mail" name="email" maxlength="254" id="id_email">
+                            <span class="focus-input100"></span>
+                    </div>
+                    <p style="color: #0051d2">학번</p>
+                    <div class="wrap-input100 validate-input m-b-16">
+                                {{ form.studentId }}
+         
+     
+                    </div>
+                    <p style="color: #0051d2">주전공</p>
+                    <div class="wrap-input100 validate-input m-b-16" >
+
+                    {{ form.studentMajor }}
+                    </div>
+        
+
+                    
                 {% csrf_token %}
-                <input class="btn btn-primary" type="submit" value="Register">
+                <button class="login100-form-btn" type="submit" value="Register">Register</button>
+
             </form>
         </div>
         <div class="col-md-2"></div>

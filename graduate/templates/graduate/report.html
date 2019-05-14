@@ -1,0 +1,691 @@
+{% extends 'base.html' %}
+{% block title %}- report{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+                <div class="content">
+                  <div class="container-fluid">
+                    <div class="row">
+
+
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-danger card-header-icon">
+                            <div class="card-icon">
+                              <i class="fa fa-check-square"></i>
+                            </div>
+                            <p class="card-category">전공필수</p>
+                            <h3 class="card-title">32/50
+                              <p><small>학점</small></p>
+                            </h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons text-danger">warning</i>
+                              <a href="#pablo">전공필수 학점이 부족합니다.</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-success card-header-icon">
+                            <div class="card-icon">
+                              <i class="fa fa-check-square-o"></i>
+                            </div>
+                            <p class="card-category">전공선택</p>
+                            <h3 class="card-title">36/36
+                                <p><small>학점</small></p>
+                            </h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons text-danger">warning</i>
+                                <a href="#pablo">전공선택 학점이 부족합니다.</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                          <div class="card card-stats">
+                            <div class="card-header card-header-info card-header-icon">
+                              <div class="card-icon">
+                                <i class="fa fa-rocket"></i>
+                              </div>
+                              <p class="card-category">꿈미래개척</p>
+                              <h3 class="card-title">4/4
+                                <p><small>번</small></p>
+                              </h3>
+                            </div>
+                            <div class="card-footer">
+                              <div class="stats">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                          <div class="card card-stats">
+                            <div class="card-header card-header-danger card-header-icon">
+                              <div class="card-icon">
+                                <i class="fa fa-paper-plane"></i>
+                              </div>
+                              <p class="card-category">이수학점</p>
+                              <h3 class="card-title">110/130
+                                  <p><small>학점</small></p>
+                              </h3>
+                            </div>
+                            <div class="card-footer">
+                              <div class="stats">
+                                <i class="material-icons"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-primary card-header-icon">
+                            <div class="card-icon">
+                              <i class="fa fa-thumb-tack"></i>
+                            </div>
+                            <p class="card-category">기초과정</p>
+                            <h3 class="card-title">13/24
+                                <p><small>학점</small></p>
+                            </h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons text-danger">warning</i>
+                                <a href="#pablo">기초과정 학점이 부족합니다.</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-success card-header-icon">
+                            <div class="card-icon">
+                              <i class="fa fa-handshake-o"></i>
+                            </div>
+                            <p class="card-category">일반교양(개척)</p>
+                            <h3 class="card-title">24/24
+                                <p><small>학점</small></p>
+                            </h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                          <div class="card card-stats">
+                            <div class="card-header card-header-info card-header-icon">
+                              <div class="card-icon">
+                                <i class="fa fa-handshake-o"></i>
+                              </div>
+                              <p class="card-category">핵심교양(통합)</p>
+                              <h3 class="card-title">32/50
+                                <p><small>학점</small></p>
+                              </h3>
+                            </div>
+                            <div class="card-footer">
+                              <div class="stats">
+                                <i class="material-icons text-danger">warning</i>
+                                <a href="#pablo">핵심교양 학점이 부족합니다.</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                          <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                              <div class="card-icon">
+                                <i class="fa fa-handshake-o"></i>
+                              </div>
+                              <p class="card-category">공통교양(역량)</p>
+                              <h3 class="card-title">36/36
+                                  <p><small>학점</small></p>
+                              </h3>
+                            </div>
+                            <div class="card-footer">
+                              <div class="stats">
+                                  <i class="material-icons text-danger">warning</i>
+                                  <a href="#pablo">전공필수 학점이 부족합니다.</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card card-chart">
+                          <div class="card-header card-header-success">
+                            <div class="ct-chart" id="dailySalesChart"></div>
+                            <script>
+                                new Chartist.Line('#dailySalesChart', 
+                                {
+                                  labels: ['1-1', '1-2', '2-1', '2-2', '3-1', '3-2', '4-1','4-2','기타'],
+                                  series: [[3.8,3.2,4.2,4.0,4.5,3.6,3.9,4,4.5]],
+                                }, 
+                                {
+                                   lineSmooth: Chartist.Interpolation.cardinal
+                                   ({tension: 0}),
+                                  low: 1,
+                                  high: 4.5, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+                                  chartPadding: {
+                                  top: 0,
+                                  right: 0,
+                                  bottom: 0,
+                                  left: 0
+                                }
+                                });
+                            </script>
+                          </div>
+                          <div class="card-body">
+                            <h4 class="card-title">학기별 학점 그래프</h4>
+                            <p class="card-category">
+                              <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4">
+                        <div class="card card-chart">
+                          <div class="card-header card-header-warning">
+                            <div class="ct-chart" id="websiteViewsChart"></div>
+                            <script>
+                                new Chartist.Pie('#websiteViewsChart', 
+                                {
+                                  labels: ['J', 'F', 'M', 'A', 'M'],
+                                  series: [52, 4, 30, 70, 55]
+                                
+                                }, 
+                                {
+                                  donut:true,
+                                  donutWidth: 60,
+                                  donutSolid: true,
+                                  startAngle: 270,
+                                  showLabel: true
+                                }
+      );
+                            </script>
+                          </div>
+                          <div class="card-body">
+                            <h4 class="card-title">Email Subscriptions</h4>
+                            <p class="card-category">Last Campaign Performance</p>
+                          </div>
+          
+                        </div>
+                      </div>
+
+                    </div>
+          
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12">
+                        <div class="card">
+                          <div class="card-header card-header-tabs card-header-primary">
+                            <div class="nav-tabs-navigation">
+                              <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title" style="font-size:17px">교양:</span>
+          
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" href="#profile" data-toggle="tab">
+                                      <i class="material-icons">child_care</i> 공통(역량)
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#messages" data-toggle="tab">
+                                      <i class="material-icons">school</i> 핵심(통합)
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#settings" data-toggle="tab">
+                                      <i class="material-icons">domain</i> 기초과정
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#pionner" data-toggle="tab">
+                                      <i class="material-icons">donut_small</i> 일반(개척)
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+                                </ul>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="tab-content">
+                              <div class="tab-pane active" id="profile">   <!--공통교양-->
+                                  <table class="table table-hover">
+                                      <thead class="text-warning">
+                                        <th>강의명</th>
+                                        <th>학점</th>
+                                        <th>성적</th>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>현대사회스포츠</td>
+                                          <td>미이수</td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td>자원과환경</td>
+                                          <td>이수</td>
+                                          <td>A+</td>
+                                        </tr>
+                                        <tr>
+                                          <td>3</td>
+                                          <td>Sage Rodriguez</td>
+                                          <td>$56,142</td>
+                                        </tr>
+                                        <tr>
+                                          <td>4</td>
+                                          <td>Philip Chaney</td>
+                                          <td>$38,735</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                              <div class="tab-pane" id="messages">   <!--핵심(통합)-->
+                                  <table class="table table-hover">
+                                    <thead class="text-warning">
+                                      <th>강의명</th>
+                                      <th>학점</th>
+                                      <th>성적</th>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>핵시핵해새</td>
+                                        <td>미이수</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>자원과환경</td>
+                                        <td>이수</td>
+                                        <td>A+</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Sage Rodriguez</td>
+                                        <td>$56,142</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>Philip Chaney</td>
+                                        <td>$38,735</td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                              <div class="tab-pane" id="settings">
+                                <table class="table table-hover">
+                                  <thead class="text-warning">
+                                    <th>강의명</th>
+                                    <th>학점</th>
+                                    <th>성적</th>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>핵시핵해새</td>
+                                      <td>미이수</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>자원과환경</td>
+                                      <td>이수</td>
+                                      <td>A+</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>Sage Rodriguez</td>
+                                      <td>$56,142</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>Philip Chaney</td>
+                                      <td>$38,735</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>Philip Chaney</td>
+                                      <td>$38,735</td>
+                                    </tr>
+                              </tbody>
+                            </table>
+                              </div>
+                              <div class="tab-pane" id="pionner">
+                                <table class="table table-hover">
+                                  <thead class="text-warning">
+                                    <th>강의명</th>
+                                    <th>학점</th>
+                                    <th>성적</th>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>핵1해새</td>
+                                      <td>미이수</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>자원과환경</td>
+                                      <td>이수</td>
+                                      <td>A+</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>Sage Rodriguez</td>
+                                      <td>$56,142</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>Philip Chaney</td>
+                                      <td>$38,735</td>
+                                    </tr>
+                              </tbody>
+                            </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      
+                      <div class="col-lg-6 col-md-12">
+                        <div class="card">
+                          <div class="card-header card-header-tabs card-header-warning">
+                            <div class="nav-tabs-navigation">
+                              <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title" style="font-size:17px">전공:</span>
+          
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" href="#major1" data-toggle="tab">
+                                      <i class="material-icons">child_care</i> 전공필수
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#major2" data-toggle="tab">
+                                      <i class="material-icons">school</i> 전공선택
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#major3" data-toggle="tab">
+                                      <i class="material-icons">domain</i> 제2전공필수
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#major4" data-toggle="tab">
+                                      <i class="material-icons">donut_small</i> 제2전공선택
+                                      <div class="ripple-container"></div>
+                                    </a>
+                                  </li>
+
+                                </ul>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="tab-content">
+                              <div class="tab-pane active" id="major1">   <!--공통교양-->
+                                  <table class="table table-hover">
+                                      <thead class="text-warning">
+                                        <th>강의명</th>
+                                        <th>학점</th>
+                                        <th>성적</th>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>현대사회스포츠</td>
+                                          <td>미이수</td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td>자원과환경</td>
+                                          <td>이수</td>
+                                          <td>A+</td>
+                                        </tr>
+                                        <tr>
+                                          <td>3</td>
+                                          <td>Sage Rodriguez</td>
+                                          <td>$56,142</td>
+                                        </tr>
+                                        <tr>
+                                          <td>4</td>
+                                          <td>Philip Chaney</td>
+                                          <td>$38,735</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                              <div class="tab-pane" id="major2">   <!--핵심(통합)-->
+                                  <table class="table table-hover">
+                                    <thead class="text-warning">
+                                      <th>강의명</th>
+                                      <th>학점</th>
+                                      <th>성적</th>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>핵시핵해새</td>
+                                        <td>미이수</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>자원과환경</td>
+                                        <td>이수</td>
+                                        <td>A+</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Sage Rodriguez</td>
+                                        <td>$56,142</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>Philip Chaney</td>
+                                        <td>$38,735</td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                              <div class="tab-pane" id="major3">
+                                <table class="table table-hover">
+                                  <thead class="text-warning">
+                                    <th>강의명</th>
+                                    <th>학점</th>
+                                    <th>성적</th>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>핵시핵해새</td>
+                                      <td>미이수</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>자원과환경</td>
+                                      <td>이수</td>
+                                      <td>A+</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>Sage Rodriguez</td>
+                                      <td>$56,142</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>Philip Chaney</td>
+                                      <td>$38,735</td>
+                                    </tr>
+                              </tbody>
+                            </table>
+                              </div>
+                              <div class="tab-pane" id="major4">
+                                <table class="table table-hover">
+                                  <thead class="text-warning">
+                                    <th>강의명</th>
+                                    <th>학점</th>
+                                    <th>성적</th>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>핵1해새</td>
+                                      <td>미이수</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>자원과환경</td>
+                                      <td>이수</td>
+                                      <td>A+</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>Sage Rodriguez</td>
+                                      <td>$56,142</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>Philip Chaney</td>
+                                      <td>$38,735</td>
+                                    </tr>
+                              </tbody>
+                            </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                    <!---3번재쭐-->
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-12">
+                            <div class="card">
+                              <div class="card-header card-header-tabs card-header-info">
+                                <div class="nav-tabs-navigation">
+                                  <div class="nav-tabs-wrapper">
+                                    <span class="nav-tabs-title" style="font-size:17px">기타:</span>
+              
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" href="#etc1" data-toggle="tab">
+                                          <i class="material-icons">child_care</i> 트랙제
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="#etc2" data-toggle="tab">
+                                          <i class="material-icons">school</i> 교직이수
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="tab-pane active" id="etc1">   <!--공통교양-->
+                                      <table class="table table-hover">
+                                          <thead class="text-warning">
+                                            <th>강의명</th>
+                                            <th>학점</th>
+                                            <th>성적</th>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>현대사회스포츠</td>
+                                              <td>미이수</td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>자원과환경</td>
+                                              <td>이수</td>
+                                              <td>A+</td>
+                                            </tr>
+                                            <tr>
+                                              <td>3</td>
+                                              <td>Sage Rodriguez</td>
+                                              <td>$56,142</td>
+                                            </tr>
+                                            <tr>
+                                              <td>4</td>
+                                              <td>Philip Chaney</td>
+                                              <td>$38,735</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                  </div>
+                                  <div class="tab-pane" id="etc2">   <!--핵심(통합)-->
+                                      <table class="table table-hover">
+                                        <thead class="text-warning">
+                                          <th>강의명</th>
+                                          <th>학점</th>
+                                          <th>성적</th>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>핵시핵해새</td>
+                                            <td>미이수</td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>자원과환경</td>
+                                            <td>이수</td>
+                                            <td>A+</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Sage Rodriguez</td>
+                                            <td>$56,142</td>
+                                          </tr>
+                                          <tr>
+                                            <td>4</td>
+                                            <td>Philip Chaney</td>
+                                            <td>$38,735</td>
+                                          </tr>
+                                          </tbody>
+                                        </table>
+                                  </div>    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                
+           
+            </div>
+   
+</html>
+
+{% endblock %}
+

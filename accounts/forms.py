@@ -26,14 +26,14 @@ studentTeaching = (('해당없음', '해당없음'), ('해당', '해당'))
 
 
 class CustomUserCreationForm(forms.ModelForm):
-    studentMajor = forms.ChoiceField(widget=forms.Select, choices=studentMajor, label='전공')
-    eduYear = forms.ChoiceField(widget=forms.Select, choices=eduYear, label='교육과정')
+    studentMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentMajor, label='전공')
+    eduYear = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=eduYear, label='교육과정')
 
-    studentDoubleMajor = forms.ChoiceField(widget=forms.Select, choices=studentDoubleMajor, label='복수전공')
-    studentTrack = forms.ChoiceField(widget=forms.Select, choices=studentTrack, label='트랙제')
-    studentSubMajor = forms.ChoiceField(widget=forms.Select, choices=studentSubMajor, label='부전공')
-    studentConvergenceMajor = forms.ChoiceField(widget=forms.Select, choices=studentConvergenceMajor, label='융합전공')
-    studentTeaching = forms.ChoiceField(widget=forms.Select, choices=studentTeaching, label='교직이수')
+    studentDoubleMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentDoubleMajor, label='복수전공')
+    studentTrack = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentTrack, label='트랙제')
+    studentSubMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentSubMajor, label='부전공')
+    studentConvergenceMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentConvergenceMajor, label='융합전공')
+    studentTeaching = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentTeaching, label='교직이수')
 
     password = forms.CharField(label='password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
@@ -52,8 +52,8 @@ class CustomUserCreationForm(forms.ModelForm):
 
 
 class CustomUserChangeForm(forms.ModelForm):
-    studentMajor = forms.ChoiceField(widget=forms.Select, choices=studentMajor, label='전공')
-    studentId = forms.ChoiceField(widget=forms.Select, choices=eduYear, label='교육과정')
+    studentMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentMajor, label='전공')
+    studentId = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=eduYear, label='교육과정')
     password = forms.CharField(label='password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
 

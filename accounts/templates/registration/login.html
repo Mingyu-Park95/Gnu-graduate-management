@@ -2,16 +2,49 @@
 {% block title %}- Login{% endblock %}
 
 {% block content %}
-<div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 panel panel-default">
-            <div class="alert alert-info">Please enter your login informations.</div>
-            <form action="" method="post">
-                {{form.as_p}}
-                {% csrf_token %}
-                <input class="btn btn-primary" type="submit" value="Login">
-            </form>
+<div class="limiter">
+    
+		<div class="container-login100">
+            <div class="wrap-login100  p-b-100">
+
+                    <span class="login100-form-title p-b-51" backgroud="#f8f8f8">
+                             Login
+                    </span> 
+        
+  
+            <form method="POST" action="{% url 'accounts:login' %}" >
+      
+                	<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+                            <input class="input100" type="text" name="username" placeholder="ID" autofocus required id="id_username">
+                            <span class="focus-input100"></span>
+                    </div>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+                            <input class="input100" type="password" name="password" placeholder="Password" required id="id_password">
+                            <span class="focus-input100"></span>
+                    </div>
+                    <div class="flex-sb-m w-full p-t-3 p-b-24">
+                            <div>
+                                <a href="#" class="txt1">
+                                    Forgot?
+                                </a>
+                            </div>
+    
+                            <div>
+                                <a href="{% url 'accounts:register' %}" class="txt1">
+                                    Sign up
+                                </a>
+                            </div>
+                    </div>
+
+                    {% csrf_token %}
+                    <button class="login100-form-btn" type="submit" value="Login">Login</button>
+
+                  
+                    </div>
+    
+                </form>
+            </div>
         </div>
-        <div class="col-md-2"></div>
 </div>
 {% endblock %}

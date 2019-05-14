@@ -7,8 +7,37 @@
         <div class="col-md-2"></div>
         <div class="col-md-8 panel panel-default">
             <div class="alert alert-info">회원 정보를 수정해 주세요</div>
-            <form action="" method="post">
-                {{form.as_p}}
+            <form action="{% url 'accounts:userChange' %}" method="post">
+              <p>이메일주소</p>
+                <div class="wrap-input100 validate-input m-b-16" >
+                    <input class="input100" type="email" name="email" maxlength="254" id="id_email">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <p>전공</p>
+                <div class="wrap-input100 validate-input m-b-16" >
+
+                    {{ form.studentMajor }}
+                </div>
+        
+                <p>학번</p>
+                <div class="wrap-input100 validate-input m-b-16">
+                            {{ form.studentId }}
+                </div>
+
+                <p>Password</p>
+                <div class="wrap-input100 validate-input m-b-16" >
+                    <input class="input100" type="password"  name="password" required="" id="id_password">
+                    <span class="focus-input100"></span>
+                </div>
+
+                
+                <p>Repeat Password</p>
+                <div class="wrap-input100 validate-input m-b-16" >
+                    <input class="input100" type="password"  name="password2" required="" id="id_password2">
+                    <span class="focus-input100"></span>
+                </div>
+
                 {% csrf_token %}
                 <input class="btn btn-primary" type="submit" value="Register">
             </form>

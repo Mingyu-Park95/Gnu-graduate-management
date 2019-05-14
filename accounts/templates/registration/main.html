@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}- main{% endblock %}
+
+{% block content %}
+    <section class="banner-area d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <h1 style="font-family:'고딕' ">학점 자가관리 시스템(Grade Hospital)<br></h1>
+                    <p style="font-family:'고딕' ">입학부터 졸업까지 나의 학점, 이제 스스로 관리해요!</p>
+                    <a href="{% url 'accounts:manual' %}" class="main_btn" style="font-family:'고딕' ">학점자가관리 사용설명서</a>
+                    <a href="https://nis.gnu.ac.kr" target="_blank" class="main_btn_light" style="font-family:'고딕' ">차세대 이동</a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!--================End Home Banner Area =================-->
+        
+        
+    <!--================ Service section start =================-->  
+        
+    <div class="service-area area-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-service text-center text-lg-left mb-4 mb-lg-0">
+                        <span class="card-service__icon">
+                                <img src="/static/main/img/1.png">
+                        </span>
+                        <h3 class="card-service__title">사용설명서</h3>
+                        <p class="card-service__subtitle">Grade Hospital이 처음인 사람, 학점 자가관리 시스템 사용법 알아보기<br>사용설명서 보기</p>
+                        <a class="card-service__link" href="{% url 'accounts:manual' %}">Learn More</a>
+                    </div>
+                </div>
+        
+            <div class="col-md-6 col-lg-4">
+                <div class="card-service text-center text-lg-left mb-4 mb-lg-0">
+                    <span class="card-service__icon">
+                        <img src="/static/main/img/2.png">
+                    </span>
+                    <h3 class="card-service__title">차세대 시스템</h3>
+                    <p class="card-service__subtitle">학점 자가관리를 하려면 차세대시스템에서 성적을 받아야해요! <br>차세대 시스템 바로가기</p>
+                    <a class="card-service__link" href="https://nis.gnu.ac.kr" target="_blank">Right Away</a>
+                </div>
+            </div>
+        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card-service text-center text-lg-left mb-4 mb-lg-0">
+                                <span class="card-service__icon">
+                                    <img src="/static/main/img/3.png">
+                                </span>
+                                <h3 class="card-service__title">학점 자가관리</h3>
+                                <p class="card-service__subtitle">사용설명서 숙지 완료! 성적파일도 있는 사람! <br>성적 관리하러 가기</p>
+                                <a class="card-service__link" href="{% url 'graduate:ready_upload' %}">Go To Upload</a>
+                            </div>
+                        </div>
+        
+        
+                    </div>
+                </div>
+            </div>    
+            <!--================ Service section end =================-->      
+        
+        
+            <!--================ Team section start =================-->  
+            <section class="team-area area-padding">
+                <div class="container">
+                    <div class="area-heading row">
+                        <div class="col-md-5 col-xl-4">
+                            <h3>Grade Hospital을<br>
+                            만든 사람들</h3>
+                        </div>
+                        <div class="col-md-7 col-xl-8">
+                            <p style="font-size:18px">Team/엄마손 파이썬 북치고 장고치고 <br>안녕하세요, 파이썬과 장고를 이용해 Grade Hospital을 만든 엄마손 파이썬 북치고 장고치고 입니다. 경상대학교 학점 자가관리 시스템을 위해 도움이 필요하시거나, 도움을 주고싶은 분들은 연락주세요!</p>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card card-team">
+                                <img class="card-img rounded-0" src="{% static 'main/img/team/s1.jpg' %}" alt="">
+                                <div class="card-team__body text-center">
+                                    <h3><a href="#">박지흠</a></h3>
+                                    <p>Web Disigner <br> Headache</p>
+                                    <div class="team-footer d-flex justify-content-between">
+                                        <a class="dn_btn" href=""><i class="ti-mobile"></i>010-3191-9845</a>
+                                        <ul class="card-team__social">
+                                            <li><a href="https://www.instagram.com/jimmy_2.28/"><i class="ti-instagram"></i></a></li>
+                                        </ul> 
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card card-team">
+                                <img class="card-img rounded-0" src="{% static 'main/img/team/s3.jpg' %}" alt="">
+                                <div class="card-team__body text-center">
+                                    <h3><a href="#">박민규</a></h3>
+                                    <p>Developer <br> Cording Person</p>
+                                    <div class="team-footer d-flex justify-content-between">
+                                        <a class="dn_btn" href=""><i class="ti-mobile"></i>010-6511-5986</a>
+                                        <ul class="card-team__social">
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card card-team">
+                                <img class="card-img rounded-0" src="{% static 'main/img/team/s2.jpg' %}" alt="">
+                                <div class="card-team__body text-center">
+                                    <h3><a href="#">박현우</a></h3>
+                                    <p>Developer<br>Error-making machine</p>
+                                    <div class="team-footer d-flex justify-content-between">
+                                        <a class="dn_btn" href=""><i class="ti-mobile"></i>010-6511-5886</a>
+                                        <ul class="card-team__social">
+
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card card-team">
+                                <img class="card-img rounded-0" src="{% static 'main/img/team/s4.jpg' %}" alt="">
+                                <div class="card-team__body text-center">
+                                    <h3><a href="#">이다경</a></h3>
+                                    <p>Web Disigner<br>amuGGoto anhae</p>
+                                    <div class="team-footer d-flex justify-content-between">
+                                        <a class="dn_btn" href=""><i class="ti-mobile"></i>010-2482-3212</a>
+                                        <ul class="card-team__social">
+                                            <li><a href="https://www.facebook.com/leeda7456"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="https://www.instagram.com/leeda7456/"><i class="ti-instagram"></i></a></li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--================ Team section end =================-->  
+
+{% endblock %}

@@ -43,5 +43,14 @@ class GradeByPeriod(models.Model):
     period = models.CharField(max_length=30)
     grade = models.FloatField()
 
+# 사용자 이름, 구분, 과목명, 학수번호, 학점, 성적
+class ForTable(models.Model):
+    ForTableUserName = models.CharField(max_length=20)
+    classification = models.CharField(max_length=10)
+    lectureName = models.CharField(max_length=40)
+    lectureNumber = models.CharField(max_length=10)
+    lecturePoint = models.IntegerField(default=0)
+    grade = models.CharField(max_length=2)
+
 
 

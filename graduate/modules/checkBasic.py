@@ -1,12 +1,34 @@
 from django.db.models import Q
 from graduate.models import BasicList
 from accounts.models import TakeList
+from accounts.models import ForTable
 # 기초과정 확인
 # 외국어 영역 =>ZGA1 번으로 시작
 # 고정과목 경영정보 기준 모두 동일
 
+def chechBasicDB(userName,eduYear,studentMajor):
+
+    for basic in BasicList.objects.filter(major=studentMajor):
+        fortable = ForTable()
+        for userBasic in TakeList.objects.filter(Q(takeListUserName=userName) & Q(classification='기초')):
+            if basic.lectureNum == userBasic.lectureName:
+                pass
+
+    if studentMajor == '경영정보학과':
+        pass
+    elif studentMajor =='회계학과':
+        pass
+    elif studentMajor =='국제통상학과':
+        pass
+    elif studentMajor =='경영학과':
+        pass
+
+
+
 
 def checkBasic(userName, studentId, studentMajor):
+
+
     compareBasicNameList = []
     userBasicNameList = []
     notTakeList = []
@@ -18,6 +40,7 @@ def checkBasic(userName, studentId, studentMajor):
     # 사용자의 기초교양 수강리스트 과목명만 저장. filter는 쿼리셋, get은 오브젝트 get은 하나만 리턴.
     for userBasic in TakeList.objects.filter(Q(takeListUserName=userName) & Q(classification='기초')):
         userBasicNameList.append(userBasic.lectureName)
+
         # 외국어 영역을 위해 체크, elif의 경우 경영학과를 위해서 체크
         if userBasic.lectureNumber[3:4] == '1':
             foreign += 1

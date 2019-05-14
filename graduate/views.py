@@ -3,8 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-from accounts.models import TakeList, CustomUser
-from graduate.models import LectureList
+from accounts.models import TakeList, CustomUser, TakeListPoint
+from graduate.models import LectureList, MajorPoint
 # 모듈 가져오기
 from graduate.modules.checkMajor import checkMajor
 
@@ -165,9 +165,41 @@ def changeResult(request):
 
 
 
+def report(request):
+    studentMajor=request.user.studentMajor
+    studentDoubleMajor = request.user.studentDoubleMajor
+    studentConvergenceMajor = request.user.studentConvergenceMajor
+    userTakePoint = TakeListPoint.objects.get(takeListPointUserName=request.user.username)
+    mustTakePoint = MajorPoint.objects.get(Q(eduYear=request.user.eduYear)&Q(major=studentMajor))
+
+    # 단일 전공인 경우
+    if studentDoubleMajor =='해당없음' and studentConvergenceMajor=='해당없음':
+        majorPoint = mustTakePoint.majorPoint
+        majorSelectPoint = mustTakePoint.majorSelectPoint
+    # 경영대학 내 복수전공인 경우
+    elif studentDoubleMajor !='해당없음' and studentConvergenceMajor =='해당없음':
+        majorPoint = mustTakePoint.dmajorPoint
+        majorSelectPoint = mustTakePoint.dmajorSelectPoint
+        doubleMajorPoint = mu
+
+    return render(request, 'graduate/report.html')
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 약간필요없는거
 def result(request):
     pass
     # return(lectureList)

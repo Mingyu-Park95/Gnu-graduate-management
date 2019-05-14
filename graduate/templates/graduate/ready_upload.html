@@ -1,25 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}- Login{% endblock %}
+{% load staticfiles %}
+{% block content %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
+
+<html lang="en" >
+
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+  
 <body>
-<html>
-    <head><title>Upload Test</title></head>
-    <body>
-        <form action="upload"
-              method="post"
-              enctype="multipart/form-data">
-            File:
-            <input type="file"
-                   name="file"
-                   id="id_file" />
-            <input type="submit" value="UPLOAD" />
-        </form>
 
-    </body>
-</html>
+  <br>
+  <br>
+
+  <h2 style="color:#0051d2 ; text-align: center; font-family :'나눔고딕'">성적을 업로드해주세요</h2>
+  
+  <p class="lead"></p>
+<br><br>
+
+
+  <!-- Upload  -->
+  <form action="upload" method="post" enctype="multipart/form-data" id="file-upload-form" class="uploader">
+    <input id ="file-upload" type="file" name="file" />
+    <label for="file-upload" id="file-drag">
+      <div id="start">
+        <i class="fa fa-download" aria-hidden="true"></i>
+        <div>파일을 선택하여 업로드하세요</div>
+      </div>
+
+      <div id="response" class="hidden">
+        <div id="messages"></div>
+      </div>
+    </label>
+    <input type="submit" value="UPLOAD" style="margin-left: 42.5%"class="btn btn-primary" />
+</form>
+
 </body>
-</html>
 
+</html>
+{% endblock %}
