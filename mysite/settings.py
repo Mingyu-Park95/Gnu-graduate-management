@@ -29,9 +29,9 @@ SECRET_KEY = 'vlv789hm6nth!9=z^qa**k0!#x%%(i)rlnx=(ug2u^%i@%g_ia'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['graduate.iptime.org','127.0.0.1']
+ALLOWED_HOSTS = ['192.168.43.57','127.0.0.1']
 
-
+# 'graduate.iptime.org',
 # Application definition
 
 INSTALLED_APPS = [
@@ -127,13 +127,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_ROOT = ''
+#
+# STATIC_URL = '/static/'
+
+STATIC_ROOT =(os.path.join('static'),)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ( os.path.join('static'), )
+STATICFILES_DIRS = (os.path.join('static'),)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 # ㅇ 커스텀 모델 사용하기
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
