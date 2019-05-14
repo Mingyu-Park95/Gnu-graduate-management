@@ -98,3 +98,11 @@ class LectureList(models.Model):
     lectureName = models.CharField(max_length=40)
     lecturePoint = models.IntegerField(default=0)
     grade = models.CharField(max_length=2)
+
+class RefinementPoint(models.Model):
+    major = models.CharField(max_length=20)
+    eduYear = models.IntegerField()
+    capabilityPoint = models.FloatField(verbose_name='역량학점')
+    integrationPoint = models.FloatField(verbose_name='통합학점')
+    basicPoint = models.FloatField(verbose_name='기초학점')
+    pioneerPoint = models.FloatField(verbose_name='개척학점')

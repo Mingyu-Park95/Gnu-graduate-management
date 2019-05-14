@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from accounts.models import TakeList, CustomUser, TakeListPoint
-from graduate.models import LectureList, MajorPoint
+from graduate.models import LectureList, MajorPoint, RefinementPoint
 # 모듈 가져오기
 from graduate.modules.checkMajor import checkMajor
 
@@ -57,11 +57,11 @@ def upload_file(request):
 
             # 내가 테스트하는 부분
             basicNotTakeList, basicTakeList = checkBasic(userName, eduYear, studentMajor)
-            dream = checkDream(userName, eduYear, studentMajor)
+            dream = checkDream(userName)
             pioneer = checkPioneer(userName, eduYear, studentMajor)
 
             # 단일전공, 복수전공 if
-            if studentDoubleMajor!='해당없음':
+            if studentDoubleMajor != '해당없음':
                 majorResult, MustTakeList, userMustTakeList = checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
             else:
                 soloMajor = checkMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
@@ -91,20 +91,20 @@ def upload_file(request):
             print(dream)
             print('개척'+pioneer)
             print('복수전공')
-            print(majorResult)
+            #print(majorResult)
             print('반드시들어야하는과목')
-            print(MustTakeList)
+            #print(MustTakeList)
             print('유저가 들은 과목')
-            print(userMustTakeList)
+            #print(userMustTakeList)
             print('단일전공')
-            # print(soloMajor)
-            print(Capability)
-            print(Integration)
-            print(convergenceMajor)
+            #print(soloMajor)
+            #print(Capability)
+            # print(Integration)
+            # print(convergenceMajor)
             #print(financeTrack)
             #print(accountTrack)
             #print(channelTrack)
-            print(ITtrack)
+            # print(ITtrack)
             #print(edu_Basic)
             #print(edu_Teach)
             #print(edu_Career)
@@ -169,20 +169,57 @@ def report(request):
     studentMajor=request.user.studentMajor
     studentDoubleMajor = request.user.studentDoubleMajor
     studentConvergenceMajor = request.user.studentConvergenceMajor
-    userTakePoint = TakeListPoint.objects.get(takeListPointUserName=request.user.username)
-    mustTakePoint = MajorPoint.objects.get(Q(eduYear=request.user.eduYear)&Q(major=studentMajor))
+    eduYear =request.user.eduYear
+    userName =request.user.username
+
+    dreamCnt, mustDream, dreamString = checkDream(userName)
+    dream = {'dreamCnt': dreamCnt,'mustDream': mustDream, 'dreamString': dreamString }
+
+
+    userTakePoint = TakeListPoint.objects.get(takeListPointUserName=userName)
+    pioneerPoint = userTakePoint.pioneer + userTakePoint.general
+    mustTakeRefinePoint = RefinementPoint.objects.get(Q(major=studentMajor)&Q(eduYear=eduYear))
+
+    mustTakePoint = MajorPoint.objects.get(Q(eduYear=eduYear) & Q(major=studentMajor))
+
+
+
+
+
+    commons = TakeList.objects.filter(Q(classification='공교')|Q(classification='역교')&Q(takeListUserName=userName))
+
+
+    a='a'
 
     # 단일 전공인 경우
     if studentDoubleMajor =='해당없음' and studentConvergenceMajor=='해당없음':
-        majorPoint = mustTakePoint.majorPoint
-        majorSelectPoint = mustTakePoint.majorSelectPoint
+        MustMajorPoint = mustTakePoint.majorPoint
+        MustMajorSelectPoint = mustTakePoint.majorSelectPoint
+        return render(request, 'graduate/report.html', {'MustMajorPoint': MustMajorPoint,
+                                                        'MustMajorSelectPoint': MustMajorSelectPoint,
+                                                        'userTakePoint': userTakePoint,
+                                                        'commons': commons,
+                                                        'pioneerPoint': pioneerPoint,
+                                                        'mustTakeRefinePoint': mustTakeRefinePoint,
+                                                        'eduYear': eduYear,
+                                                        'dream': dream,
+                                                        'a': a})
     # 경영대학 내 복수전공인 경우
     elif studentDoubleMajor !='해당없음' and studentConvergenceMajor =='해당없음':
-        majorPoint = mustTakePoint.dmajorPoint
-        majorSelectPoint = mustTakePoint.dmajorSelectPoint
-        doubleMajorPoint = mu
+        mustDoubleTakePoint = MajorPoint.objects.get(Q(eduYear=eduYear) & Q(major=studentDoubleMajor))
+        MustMajorPoint = mustTakePoint.dmajorPoint
+        MustMajorSelectPoint = mustTakePoint.dmajorSelectPoint
+        MustDoubleMajorPoint = mustDoubleTakePoint.dmajorPoint
+        MustDoubleMajorSelectPoint = mustDoubleTakePoint.dmajorSelectPoint
 
-    return render(request, 'graduate/report.html')
+
+    elif studentDoubleMajor =='해당없음' and studentConvergenceMajor !='':
+        pass # 현우
+
+
+
+
+
 
 
 

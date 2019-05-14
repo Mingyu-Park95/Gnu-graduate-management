@@ -13,7 +13,7 @@ from django.db.models import Q
 from accounts.models import TakeList
 
 
-def checkDream(userName, eduYear, studentMajor):
+def checkDream(userName):
     max = 0
     point = 0
     dreamCnt = 0
@@ -38,11 +38,11 @@ def checkDream(userName, eduYear, studentMajor):
 
     #14년도 1학기 꿈미래들은 경우
     if max == 3 and point >= max:
-        return '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s, 차감해야하는 학점 = %s' % (point, max, (point-max))
+        return  dreamCnt, 3, '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s, 차감해야하는 학점 = %s' % (point, max, (point-max))
     elif max == 3 and point < max and dreamCnt >= 3:
-        return '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s,' % (point, point)
+        return  dreamCnt, 3, '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s,' % (point, point)
     elif max == 3 and dreamCnt < 3:
-        return '꿈미래 상담 이수필요 %s번 더 이수 필요' % (3-dreamCnt)
+        return  dreamCnt, 3, '꿈미래 상담 이수필요 %s번 더 이수 필요' % (3-dreamCnt)
 
     # 14학년도 1학기 안들은 경우 2학점 인정, 3번 들어야됨
     # elif max == 2 and eduYear == 2014 and dreamCnt == 3:
@@ -54,9 +54,9 @@ def checkDream(userName, eduYear, studentMajor):
 
     # 15학번부터 4번 들어야한다.
     elif max == 2 and dreamCnt >= 4:
-        return '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s, 차감해야하는 학점 = %s' % (point, max, (point - max))
+        return  dreamCnt, 4, '꿈미래 상담 이수완료, 들은학점 = %s, 인정 학점 = %s, 차감해야하는 학점 = %s' % (point, max, (point - max))
     elif max == 2 and dreamCnt < 4:
-        return '꿈미래 상담 이수필요 %s번 더 이수 필요' % (4 - dreamCnt)
+        return  dreamCnt, 4, '꿈미래 상담 이수필요 %s번 더 이수 필요' % (4 - dreamCnt)
 
 # 17학번 이전 개척 교양 => 존재하지 않는다.
 # 17학번 이후 개척 교양 => 과목2개 학점 4학점 채워야 됨

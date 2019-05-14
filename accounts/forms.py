@@ -31,7 +31,7 @@ class CustomUserCreationForm(forms.ModelForm):
 
     studentDoubleMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentDoubleMajor, label='복수전공')
     studentTrack = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentTrack, label='트랙제')
-    studentSubMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentSubMajor, label='부전공')
+    # studentSubMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentSubMajor, label='부전공')
     studentConvergenceMajor = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentConvergenceMajor, label='융합전공')
     studentTeaching = forms.ChoiceField(widget=forms.Select(attrs={'class':'browser-default custom-select'}), choices=studentTeaching, label='교직이수')
 
@@ -41,8 +41,9 @@ class CustomUserCreationForm(forms.ModelForm):
 
     class Meta:
         model = CustomUser
+        exclude = ['studentSubMajor']
         fields = ['username', 'email', 'studentMajor', 'eduYear', 'studentDoubleMajor', 'studentTrack',
-                  'studentSubMajor', 'studentConvergenceMajor', 'studentTeaching']
+                   'studentConvergenceMajor', 'studentTeaching']
 
     def clean_password2(self):
         cd = self.cleaned_data

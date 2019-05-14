@@ -22,12 +22,10 @@ def makeTakeList(request):
     ws = wb.sheet_by_index(0)
     ncol = ws.ncols
     nlow = ws.nrows
+    rowStart = 6
 
-    print("-------- Sheet1 --------")
-    print(str(ncol))
-    print(str(nlow))
 
-    i = 6
+    i = rowStart
     j = 1
     low = []
     tmpStr = ''
@@ -201,7 +199,7 @@ def makeTakeList(request):
         takelist.classification = list2[i][0]
         takelist.lectureNumber = list2[i][1]
         takelist.lectureName = list2[i][2]
-        takelist.lecturePoint = list2[i][3]
+        takelist.lecturePoint = float(list2[i][3])
         takelist.grade = list2[i][4]
         takelist.save()
 

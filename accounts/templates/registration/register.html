@@ -36,19 +36,36 @@
                             <input class="input100" type="email" placeholder="E-mail" name="email" maxlength="254" id="id_email">
                             <span class="focus-input100"></span>
                     </div>
+
                     <p style="color: #0051d2">학번</p>
                     <div class="wrap-input100 validate-input m-b-16">
-                                {{ form.studentId }}
-         
-     
+                                {{ form.eduYear }}
                     </div>
+
                     <p style="color: #0051d2">주전공</p>
                     <div class="wrap-input100 validate-input m-b-16" >
-
                     {{ form.studentMajor }}
                     </div>
-        
 
+                    <p style="color: #0051d2">복수전공</p>
+                    <div class="wrap-input100 validate-input m-b-16" >
+                    {{ form.studentDoubleMajor }}
+                    </div>
+
+                    <p style="color: #0051d2">트랙제</p>
+                    <div class="wrap-input100 validate-input m-b-16" >
+                    {{ form.studentTrack }}
+                    </div>
+
+                    <p style="color: #0051d2">융합전공</p>
+                    <div class="wrap-input100 validate-input m-b-16" >
+                    {{ form.studentConvergenceMajor }}
+                    </div>
+
+                    <p style="color: #0051d2">교직이수</p>
+                    <div class="wrap-input100 validate-input m-b-16" >
+                    {{ form.studentTeaching }}
+                    </div>
                     
                 {% csrf_token %}
                 <button class="login100-form-btn" type="submit" value="Register">Register</button>

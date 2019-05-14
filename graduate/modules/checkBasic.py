@@ -28,7 +28,6 @@ def chechBasicDB(userName,eduYear,studentMajor):
 
 def checkBasic(userName, studentId, studentMajor):
 
-
     compareBasicNameList = []
     userBasicNameList = []
     notTakeList = []
@@ -61,36 +60,71 @@ def checkBasic(userName, studentId, studentMajor):
         if compareBasicName not in userBasicNameList:
             notTakeList.append(compareBasicName)
 
-    # 외국어 영역 처리 경영학과 따로 구분하기 얘는 DB에서 처리 못해
-    if foreign == 0:
-        if studentMajor == '경영학과':
-            notTakeList.append('외국어 영역 2과목 부족')
-        else:
-            notTakeList.append('외국어 영역 1과목 부족')
-    elif foreign ==1:
-        if studentMajor == '경영학과':
-            notTakeList.append('외국어 영역 1과목 부족')
-        else:
-            takeList.append('외국어 영역 완료')
-    elif foreign >= 2:
-            takeList.append('외국어 영역 완료')
+
+    notTakeListLen = len(notTakeList)
+    print(notTakeListLen)
+    notTakeString = ','.join(notTakeList)
 
     # 경영학과 인문사회 영역 처리
     if studentMajor == '경영학과':
-        if humanAndSocial == 0:
-            notTakeList.append('인문사회영역 5과목 부족')
-        elif humanAndSocial == 1:
-            notTakeList.append('인문사회영역 4과목 부족')
-        elif humanAndSocial == 2:
-            notTakeList.append('인문사회영역 3과목 부족')
-        elif humanAndSocial == 3:
-            notTakeList.append('인문사회영역 2과목 부족')
-        elif humanAndSocial == 4:
-            notTakeList.append('인문사회영역 1과목 부족')
-        elif humanAndSocial >= 5:
-            takeList.append('인문사회영역 5과목 이수')
+        if notTakeListLen == 0:
+            if humanAndSocial == 5:
+                notTakeString +="인문 사회 영역을 모두 완료 했습니다. /"
+            elif humanAndSocial ==4:
+                notTakeString +="인문사회영역 1개 과목을 더들어야 합니다. /"
+            elif humanAndSocial ==3:
+                notTakeString +="인문사회영역 2개 과목을 더들어야 합니다 /"
+        elif notTakeListLen == 1:
+            if humanAndSocial == 4:
+                notTakeString +="을 들어야 합니다. /"
+            elif humanAndSocial ==3:
+                notTakeString +="를 듣고 인문사회영역 1개 과목을 더 들어야 합니다 /"
+            elif humanAndSocial ==2:
+                notTakeString +="를 듣고 인문사회영역 2개 과목을 더 들어야 합니다 /"
+        elif notTakeListLen ==2:
+            if humanAndSocial == 3:
+                notTakeString +="를 들어야 합니다 /"
+            elif humanAndSocial == 2:
+                notTakeString +="를 듣고 인문사회영역 1개 과목을 더 들어야 합니다 /"
+            elif humanAndSocial ==1:
+                notTakeString +="를 듣고 인문사회영역 2개 과목을 더 들어야 합니다 /"
+        elif notTakeListLen ==3 :
+            if humanAndSocial == 2:
+                notTakeString +="를 들어야 합니다 /"
+            elif humanAndSocial ==1:
+                notTakeString +="를 듣고 인문사회 영역 1개 과목을 더 들어야 합니다 /"
+            elif humanAndSocial == 0:
+                notTakeString +="를 듣고 인문사회 영역 2개 과목을 더 들어야 합니다. /"
+
+            # 외국어 영역 처리 경영학과 따로 구분하기 얘는 DB에서 처리 못해
+            if foreign == 0:
+                if studentMajor == '경영학과':
+                    notTakeString +='외국어 영역 2과목 부족'
+                else:
+                    notTakeString += '외국어 영역 1과목 부족'
+            elif foreign == 1:
+                if studentMajor == '경영학과':
+                    notTakeString += '외국어 영역 1과목 부족'
+                else:
+                    takeList.append('외국어 영역 완료')
+            elif foreign >= 2:
+                takeList.append('외국어 영역 완료')
+
+        # if humanAndSocial == 0:
+        #     notTakeList.append('인문사회영역 5과목 부족')
+        # elif humanAndSocial == 1:
+        #     notTakeList.append('인문사회영역 4과목 부족')
+        # elif humanAndSocial == 2:
+        #     notTakeList.append('인문사회영역 3과목 부족')
+        # elif humanAndSocial == 3:
+        #     notTakeList.append('인문사회영역 2과목 부족')
+        # elif humanAndSocial == 4:
+        #     notTakeList.append('인문사회영역 1과목 부족')
+        # elif humanAndSocial >= 5:
+        #     takeList.append('인문사회영역 5과목 이수')
     # 다중 리턴
-    return notTakeList, takeList
+
+    return notTakeString, takeList
 
     # 외국어 영역 처리만 따로 해줘야 할 듯
     # elif studentMajor == '경영학과':

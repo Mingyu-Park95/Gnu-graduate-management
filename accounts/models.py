@@ -21,7 +21,7 @@ class TakeList(models.Model):
     classification = models.CharField(max_length=10)
     lectureNumber = models.CharField(max_length=10)
     lectureName = models.CharField(max_length=40)
-    lecturePoint = models.IntegerField(default=0)
+    lecturePoint = models.FloatField(default=0)
     grade = models.CharField(max_length=2)
     addedCustom = models.BooleanField(default=False)
 
