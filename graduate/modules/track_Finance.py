@@ -10,6 +10,7 @@ def financeTrack_Judge(userName, eduYear, studentMajor):
     user_Track_point = 0
     user_noTake_str = ''
     resultValue = []
+    user_takeTrack_list =[]
 
     for takeList in TakeList.objects.filter(
             Q(takeListUserName=userName) & (Q(classification="전선") | Q(classification="전필") | Q(classification="이필") | Q(classification="이선"))):
@@ -26,6 +27,9 @@ def financeTrack_Judge(userName, eduYear, studentMajor):
             if db_Basic in user_Take_list:
                 user_Track_point += Track.objects.get(
                     Q(lectureNum=db_Basic) & Q(eduYear__lt=2019) & Q(trackName="재무금융트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Basic) & Q(takeListUserName=userName)))
+
             else:
                 user_noTake_str += Track.objects.get(
                     Q(lectureNum=db_Basic) & Q(eduYear__lt=2019) & Q(trackName="재무금융트랙")).lectureName
@@ -37,7 +41,7 @@ def financeTrack_Judge(userName, eduYear, studentMajor):
             resultValue.append(
                 "트랙기본 {0}학점이 부족합니다.".format(total_Track_point - user_Track_point) + "들어야하는 과목 : " + user_noTake_str)
 
-        return resultValue
+        return resultValue, user_takeTrack_list
 
     else:
         total_Track_point = 24
@@ -54,6 +58,8 @@ def financeTrack_Judge(userName, eduYear, studentMajor):
             if db_Basic in user_Take_list:
                 user_Track_point += Track.objects.get(
                     Q(lectureNum=db_Basic) & Q(eduYear=2019) & Q(trackName="재무금융트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Basic) & Q(takeListUserName=userName)))
 
             else:
                 user_noTake_str += Track.objects.get(
@@ -66,4 +72,4 @@ def financeTrack_Judge(userName, eduYear, studentMajor):
             resultValue.append(
                 "트랙기본 {0}학점이 부족합니다.".format(total_Track_point - user_Track_point) + "들어야하는 과목 : " + user_noTake_str)
 
-        return resultValue
+        return resultValue, user_takeTrack_list

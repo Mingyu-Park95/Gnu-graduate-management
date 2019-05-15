@@ -23,7 +23,9 @@ def convergenceMajor_Judge(userName,eduYear,studentMajor):
     user_select_point =0 # 사용자가 들은 이선 학점
 
     potenital_select =0 # 복수인정 초과 과목 개수
-    resultValue =[] # return 해주는 변수
+    resultValue ='' # return 해주는 변수
+
+    user_takeConvergence_list =[]
 
     for user_essentialMajorNum in TakeList.objects.all().filter(Q(classification="전필") & Q(takeListUserName=userName)): # 사용자가 들은 전필
         user_essentialMajorNum_list.append(user_essentialMajorNum.lectureNumber)
@@ -58,6 +60,8 @@ def convergenceMajor_Judge(userName,eduYear,studentMajor):
         for user_essentialMajorNum in user_essentialMajorNum_list:
             if user_essentialMajorNum in db_selectNum_list:
                mulitiApprove_list.append(user_essentialMajorNum)
+               user_takeConvergence_list.append(
+                   TakeList.objects.get(Q(lectureNumber=user_essentialMajorNum) & Q(takeListUserName=userName)))
 
         if len(mulitiApprove_list) >4: # 복수인정과목을 4개 이상 들었을 때 판별
             user_select_point = 12
@@ -69,12 +73,12 @@ def convergenceMajor_Judge(userName,eduYear,studentMajor):
             if db_selectNum in user_selectNum_list:
                 user_select_point += ConvergenceMajor.objects.get(Q(dmajornum=db_selectNum) & Q(eduYear=2018)).dmajorPoint
 
-        resultValue.append("융합전공 이필 이수 학점 : {0}/{1}, 이선 인정학점 : {2}/{3}, 전필 미이수 과목 : {4}, 이선으로 옮길 수 있는 과목 수 {5}".format(user_essential_point,
+        resultValue+="전필 미이수 과목 : {4} 이선으로 옮길 수 있는 과목 수 {5}".format(user_essential_point,
                                                                                                        totalEssential_point,
                                                                                                        user_select_point,
                                                                                                        totalSelect_point,noTake_str,
-                                                                                                       potenital_select))
-        return resultValue
+                                                                                                       potenital_select)
+        return resultValue, user_takeConvergence_list
 
     else: # 교육과정 19년 이후
         for db_essential in ConvergenceMajor.objects.all().filter(
@@ -100,6 +104,8 @@ def convergenceMajor_Judge(userName,eduYear,studentMajor):
         for user_essentialMajorNum in user_essentialMajorNum_list:
             if user_essentialMajorNum in db_selectNum_list:
                 mulitiApprove_list.append(user_essentialMajorNum)
+                user_takeConvergence_list.append(
+                    TakeList.objects.get(Q(lectureNumber=user_essentialMajorNum) & Q(takeListUserName=userName)))
 
         if len(mulitiApprove_list) > 4:  # 복수인정과목을 4개 이상 들었을 때 판별
             user_select_point = 12
@@ -112,9 +118,9 @@ def convergenceMajor_Judge(userName,eduYear,studentMajor):
                 user_select_point += ConvergenceMajor.objects.get(
                     Q(dmajornum=db_selectNum) & Q(eduYear=2019)).dmajorPoint
 
-        resultValue.append("융합전공 이필 이수 학점 : {0}/{1}, 이선 인정학점 : {2}/{3}, 전필 미이수 과목 : {4}, 이선으로 옮길 수 있는 과목 수 {5}".format(user_essential_point,
+        resultValue+="전필 미이수 과목 : {4} 이선으로 옮길 수 있는 과목 수 {5}".format(user_essential_point,
                                                                                        totalEssential_point,
                                                                                        user_select_point,
                                                                                        totalSelect_point,noTake_str,
-                                                                                       potenital_select))
-        return resultValue
+                                                                                       potenital_select)
+        return resultValue, user_takeConvergence_list

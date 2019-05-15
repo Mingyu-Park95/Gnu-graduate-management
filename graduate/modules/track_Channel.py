@@ -20,7 +20,7 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
 
     user_noTake_str = '' # 듣지 않은 과목 표시해줄 str
     resultValue = [] # return 해주는 변수
-
+    user_takeTrack_list =[]
     # 사용자가 들은 전선, 전필 과목들 저장
     for takeList in TakeList.objects.filter(
             Q(takeListUserName=userName) & (Q(classification="전선") | Q(classification="전필") | Q(classification="이필") | Q(classification="이선"))):
@@ -36,6 +36,9 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             if db_Basic in user_Take_list:
                 user_Basic_point += Track.objects.get(
                     Q(lectureNum=db_Basic) & Q(eduYear__lt=2018) & Q(trackName="유통서비스트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Basic) & Q(takeListUserName=userName)))
+
             else: # 듣지 않은 과목명 저장
                 user_noTake_str += Track.objects.get(
                     Q(lectureNum=db_Basic) & Q(eduYear__lt=2018) & Q(trackName="유통서비스트랙")).lectureName
@@ -57,6 +60,8 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             if db_Advance in user_Take_list:
                 user_Advance_point += Track.objects.get(
                     Q(lectureNum=db_Advance) & Q(eduYear__lt=2018) & Q(trackName="유통서비스트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Advance) & Q(takeListUserName=userName)))
             else:
                 user_noTake_str += Track.objects.get(
                     Q(lectureNum=db_Advance) & Q(eduYear__lt=2018) & Q(trackName="유통서비스트랙")).lectureName
@@ -78,6 +83,8 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             if db_Common in user_Take_list:
                 user_common_point += Track.objects.get(
                     Q(lectureNum=db_Common) & Q(eduYear__lt=2018) & Q(trackName="유통서비스트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Common) & Q(takeListUserName=userName)))
             else:
                 user_noTake_str += Track.objects.get(
                     Q(lectureNum=db_Common) & Q(eduYear__lt=2018) & Q(trackName="유통서비스트랙")).lectureName
@@ -89,7 +96,7 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             resultValue.append(
                 "트랙공통 {0}학점이 부족합니다.".format(total_common_point - user_common_point) + "남은 과목 : " + user_noTake_str)
 
-        return resultValue
+        return resultValue, user_takeTrack_list
 
     else:  # 교육과정이 2018 이후 라면
 
@@ -101,6 +108,9 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             if db_Basic in user_Take_list:
                 user_Basic_point += Track.objects.get(
                     Q(lectureNum=db_Basic) & Q(eduYear__gte=2018) & Q(trackName="유통서비스트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Basic) & Q(takeListUserName=userName)))
+
             else:  # 듣지 않은 과목명 저장
                 user_noTake_str += Track.objects.get(
                     Q(lectureNum=db_Basic) & Q(eduYear__gte=2018) & Q(trackName="유통서비스트랙")).lectureName
@@ -122,6 +132,9 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             if db_Advance in user_Take_list:
                 user_Advance_point += Track.objects.get(
                     Q(lectureNum=db_Advance) & Q(eduYear__gte=2018) & Q(trackName="유통서비스트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Advance) & Q(takeListUserName=userName)))
+
             else:
                 user_noTake_str += Track.objects.get(
                     Q(lectureNum=db_Advance) & Q(eduYear__gte=2018) & Q(trackName="유통서비스트랙")).lectureName
@@ -144,6 +157,9 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             if db_Common in user_Take_list:
                 user_common_point += Track.objects.get(
                     Q(lectureNum=db_Common) & Q(eduYear__gte=2018) & Q(trackName="유통서비스트랙")).lecturePoint
+                user_takeTrack_list.append(
+                    TakeList.objects.get(Q(lectureNumber=db_Common) & Q(takeListUserName=userName)))
+
             else:
                 user_noTake_str += Track.objects.get(
                     Q(lectureNum=db_Common) & Q(eduYear__gte=2018) & Q(trackName="유통서비스트랙")).lectureName
@@ -155,4 +171,4 @@ def channelTrack_Judge(userName, eduYear, studentMajor):
             resultValue.append(
                 "트랙공통 {0}학점이 부족합니다.".format(total_common_point - user_common_point) + "남은 과목 : " + user_noTake_str)
 
-        return resultValue
+        return resultValue,user_takeTrack_list

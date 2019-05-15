@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-from accounts.models import TakeList, CustomUser, TakeListPoint
+from accounts.models import TakeList, CustomUser, TakeListPoint, GradeByPeriod
 from graduate.models import LectureList, MajorPoint, RefinementPoint
 # 모듈 가져오기
 from graduate.modules.checkMajor import checkMajor
@@ -39,78 +39,15 @@ def upload_file(request):
 
             # 처리에 필요한 회원 정보
             userName = request.user.username
-            eduYear = request.user.eduYear
-            studentMajor = request.user.studentMajor
-            studentSubMajor = request.user.studentSubMajor
-            studentDoubleMajor = request.user.studentDoubleMajor
-            studentConvergence =request.user.studentConvergenceMajor
-            studentTrack = request.user.studentTrack
-            studentTeaching = request.user.studentTeaching
-
             filename = userName
             fp = open('%s/%s' % ('a', filename) , 'wb')
             for chunk in file.chunks():
                 fp.write(chunk)
             fp.close()
+
             makeTakeList(request)
 
-
-            # 내가 테스트하는 부분
-            basicNotTakeList, basicTakeList = checkBasic(userName, eduYear, studentMajor)
-            dream = checkDream(userName)
-            pioneer = checkPioneer(userName, eduYear, studentMajor)
-
-            # 단일전공, 복수전공 if
-            if studentDoubleMajor != '해당없음':
-                majorResult, MustTakeList, userMustTakeList = checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
-            else:
-                soloMajor = checkMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor)
-
-            Capability = Capability_Judge(userName,eduYear,studentMajor)
-            Integration = Integration_Judge(userName, eduYear, studentMajor)
-
-            if studentConvergence =='산업경영지원학':
-                convergenceMajor = convergenceMajor_Judge(userName, eduYear, studentMajor)
-
-            if studentTrack =='재무금융트랙':
-                financeTrack = financeTrack_Judge(userName, eduYear, studentMajor)
-            elif studentTrack =='세무전문트랙':
-                accountTrack = accountTrack_Judge(userName, eduYear, studentMajor)
-            elif studentTrack =='유통서비스트랙':
-                channelTrack = channelTrack_Judge(userName, eduYear, studentMajor)
-            elif studentTrack == 'IT융합시스템개발':
-                ITtrack = ITtrack_Judge(userName, eduYear, studentMajor)
-
-            if studentTeaching =='해당':
-                edu_Basic = edu_Basic_Judge(userName, eduYear, studentMajor)
-                edu_Teach = edu_Teach_Judge(userName, eduYear, studentMajor)
-                edu_Career = edu_Career_Judge(userName, eduYear, studentMajor)
-
-            print(basicNotTakeList)
-            print(basicTakeList)
-            print(dream)
-            print('개척'+pioneer)
-            print('복수전공')
-            #print(majorResult)
-            print('반드시들어야하는과목')
-            #print(MustTakeList)
-            print('유저가 들은 과목')
-            #print(userMustTakeList)
-            print('단일전공')
-            #print(soloMajor)
-            #print(Capability)
-            # print(Integration)
-            # print(convergenceMajor)
-            #print(financeTrack)
-            #print(accountTrack)
-            #print(channelTrack)
-            # print(ITtrack)
-            #print(edu_Basic)
-            #print(edu_Teach)
-            #print(edu_Career)
-
-
-            return render(request, 'graduate/result.html')
+            return report(request)
     return HttpResponse('Failed to Upload File')
 
 
@@ -152,17 +89,14 @@ def change(request):
                 deleteObject = TakeList.objects.get(Q(addedCustom=True) & Q(id=delete))
                 deleteObject.delete()
         return HttpResponseRedirect('change', {'AddedList': AddedList})
-
     return render(request, 'graduate/change.html')
+
 
 @csrf_exempt
 def changeResult(request):
     if request.method == 'POST':
         customs = request.POST.getlist('check_name')
     return render(request, 'graduate/changeResult.html', {'customs':customs})
-
-        #return render(request,'graduate/changeResult.html', {'customs':customs})
-
 
 
 def report(request):
@@ -172,60 +106,171 @@ def report(request):
     eduYear =request.user.eduYear
     userName =request.user.username
 
+    studentConvergence = request.user.studentConvergenceMajor
+    studentTrack = request.user.studentTrack
+    studentTeaching = request.user.studentTeaching
+
     dreamCnt, mustDream, dreamString = checkDream(userName)
     dream = {'dreamCnt': dreamCnt,'mustDream': mustDream, 'dreamString': dreamString }
 
 
     userTakePoint = TakeListPoint.objects.get(takeListPointUserName=userName)
-    pioneerPoint = userTakePoint.pioneer + userTakePoint.general
+    userPioneerPoint = userTakePoint.pioneer + userTakePoint.general
     mustTakeRefinePoint = RefinementPoint.objects.get(Q(major=studentMajor)&Q(eduYear=eduYear))
 
     mustTakePoint = MajorPoint.objects.get(Q(eduYear=eduYear) & Q(major=studentMajor))
 
-
-
-
-
-    commons = TakeList.objects.filter(Q(classification='공교')|Q(classification='역교')&Q(takeListUserName=userName))
-
-
-    a='a'
-
+    MustDoubleMajorPoint=''
+    MustDoubleMajorSelectPoint=''
+    notTakeSting=''
+    majorResult=''
+    doubleOn = 'off'
     # 단일 전공인 경우
-    if studentDoubleMajor =='해당없음' and studentConvergenceMajor=='해당없음':
+    if studentDoubleMajor =='해당없음' and studentConvergenceMajor == '해당없음':
         MustMajorPoint = mustTakePoint.majorPoint
         MustMajorSelectPoint = mustTakePoint.majorSelectPoint
-        return render(request, 'graduate/report.html', {'MustMajorPoint': MustMajorPoint,
-                                                        'MustMajorSelectPoint': MustMajorSelectPoint,
-                                                        'userTakePoint': userTakePoint,
-                                                        'commons': commons,
-                                                        'pioneerPoint': pioneerPoint,
-                                                        'mustTakeRefinePoint': mustTakeRefinePoint,
-                                                        'eduYear': eduYear,
-                                                        'dream': dream,
-                                                        'a': a})
+
     # 경영대학 내 복수전공인 경우
-    elif studentDoubleMajor !='해당없음' and studentConvergenceMajor =='해당없음':
+    if studentDoubleMajor !='해당없음':
+        doubleOn ='on'
         mustDoubleTakePoint = MajorPoint.objects.get(Q(eduYear=eduYear) & Q(major=studentDoubleMajor))
         MustMajorPoint = mustTakePoint.dmajorPoint
         MustMajorSelectPoint = mustTakePoint.dmajorSelectPoint
         MustDoubleMajorPoint = mustDoubleTakePoint.dmajorPoint
         MustDoubleMajorSelectPoint = mustDoubleTakePoint.dmajorSelectPoint
+        notTakeSting, majorResult =checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor)
+
+    convergenceMajor_str=''
+    edu_Basic=''
+    edu_Teach=''
+    edu_Career=''
+    Track_str=''
+    takeTrack_list = []
+    convergence_list = []
+    takeConvergence_list =[]
+    dmajor_list=[]
+    dmajor_select_list=[]
+
+    # 교직이수
+    if studentTeaching == '해당':
+        edu_Basic = edu_Basic_Judge(userName, eduYear, studentMajor)
+        edu_Teach = edu_Teach_Judge(userName, eduYear, studentMajor)
+        edu_Career = edu_Career_Judge(userName, eduYear, studentMajor)
+
+    # String 값 띄우기
+    Capability_str = Capability_Judge(userName, eduYear, studentMajor)
+    Integration_str = Integration_Judge(userName, eduYear, studentMajor)
+    Basic_str = checkBasic(userName, eduYear, studentMajor)
+    Pioneer_str = checkPioneer(userName, eduYear, studentMajor)
+
+    # 산업경영지원학
+    if studentConvergence == '산업경영지원학':
+        convergenceMajor_str, takeConvergence_list = convergenceMajor_Judge(userName, eduYear, studentMajor)
+        convergence_list = TakeList.objects.filter(Q(classification='이필') & Q(takeListUserName=userName))
+        MustMajorPoint = mustTakePoint.dmajorPoint
+        MustMajorSelectPoint = mustTakePoint.dmajorSelectPoint
+    # 트랙제
+    if studentTrack == '재무금융트랙':
+        Track_str, takeTrack_list = financeTrack_Judge(userName, eduYear, studentMajor)
+    elif studentTrack == '세무전문트랙':
+        Track_str, takeTrack_list = accountTrack_Judge(userName, eduYear, studentMajor)
+    elif studentTrack == '유통서비스트랙':
+        Track_str, takeTrack_list = channelTrack_Judge(userName, eduYear, studentMajor)
+    elif studentTrack == 'IT융합시스템개발':
+        Track_str, takeTrack_list = ITtrack_Judge(userName, eduYear, studentMajor)
+
+    if studentTeaching == '해당':
+        edu_Basic = edu_Basic_Judge(userName, eduYear, studentMajor)
+        edu_Teach = edu_Teach_Judge(userName, eduYear, studentMajor)
+        edu_Career = edu_Career_Judge(userName, eduYear, studentMajor)
 
 
-    elif studentDoubleMajor =='해당없음' and studentConvergenceMajor !='':
-        pass # 현우
+    # 테이블에 수강한 과목 화면에 띄우기
+    integration_list = TakeList.objects.filter(
+        Q(takeListUserName=userName) & (Q(classification='공교') | Q(classification='역교')))
+    capability_list = TakeList.objects.filter(
+        (Q(classification='핵심') | Q(classification='통교')) & Q(takeListUserName=userName))
+    basic_list = TakeList.objects.filter(Q(classification='기초') & Q(takeListUserName=userName))
+    pioneer_list = TakeList.objects.filter(Q(lectureName='꿈·미래개척') & Q(takeListUserName=userName))
+    major_list = TakeList.objects.filter(Q(classification='전필') & Q(takeListUserName=userName))
+    major_select_list = TakeList.objects.filter(Q(classification='전선') & Q(takeListUserName=userName))
+    dmajor_list = TakeList.objects.filter(Q(classification='이필')& Q(takeListUserName=userName))
+    dmajor_select_list = TakeList.objects.filter(Q(classification='이선') & Q(takeListUserName=userName))
 
+    gradeList = []
+    periodList = ''
+    for grade in GradeByPeriod.objects.filter(gradeByPeriodName=userName):
+        gradeList.append(grade.grade)
+        periodList+=grade.period[8:]+'a'
 
+    A =''
+    B =''
+    C =''
+    D =''
+    P =''
 
+    A = TakeList.objects.filter(Q(takeListUserName=userName) & (Q(grade='A+') | Q(grade='A0')))
+    B = TakeList.objects.filter(Q(takeListUserName=userName) & (Q(grade='B+') | Q(grade='B0')))
+    C = TakeList.objects.filter(Q(takeListUserName=userName) & (Q(grade='C+') | Q(grade='C0')))
+    D = TakeList.objects.filter(Q(takeListUserName=userName) & (Q(grade='D+') | Q(grade='D0')))
+    P = TakeList.objects.filter(Q(takeListUserName=userName) & (Q(grade='P')))
+    A = len(A)
+    B = len(B)
+    C = len(C)
+    D = len(D)
+    P = len(P)
+    # for grade in TakeList.objects.filter(takeListUserName=userName):
+    #     if grade.grade == 'A+' or grade.grade == 'A0':
+    #         A +=1
+    #     elif grade.grade == 'B+' or grade.grade == 'B0':
+    #         B +=1
+    #     elif grade.grade == 'C+' or grade.grade == 'C0':
+    #         C +=1
+    return render(request, 'graduate/report.html', {'Integration_str': Integration_str,
+                                                    'Capability_str': Capability_str,
+                                                    'Basic_str': Basic_str,
+                                                    'Pioneer_str': Pioneer_str,
+                                                    'convergenceMajor_str': convergenceMajor_str,
+                                                    'Track_str': Track_str,
+                                                    'edu_Basic': edu_Basic,
+                                                    'edu_Teach': edu_Teach,
+                                                    'edu_Career': edu_Career,
+                                                    'integration_list': integration_list,
+                                                    'capability_list': capability_list,
+                                                    'basic_list': basic_list,
+                                                    'pioneer_list': pioneer_list,
+                                                    'major_list': major_list,
+                                                    'major_select_list': major_select_list,
+                                                    'dmajor_list': dmajor_list,
+                                                    'dmajor_select_list': dmajor_select_list,
+                                                    'convergence_list': convergence_list,
+                                                    'takeConvergence_list': takeConvergence_list,
+                                                    'takeTrack_list': takeTrack_list,
 
+                                                    'userPioneerPoint': userPioneerPoint,
+                                                    'mustTakeRefinePoint': mustTakeRefinePoint,
+                                                    'eduYear': eduYear, # 교육과정 for 개척교양
+                                                    'dream': dream,
 
+                                                    'userTakePoint': userTakePoint, #사용자가 들은 학점 한 행.
 
-
-
-
-
-
+                                                    'MustMajorPoint': MustMajorPoint,  # 전필 들어야 되는거
+                                                    'MustMajorSelectPoint': MustMajorSelectPoint, #전선 들어야 되는거
+                                                    'MustDoubleMajorPoint': MustDoubleMajorPoint, #이필 들어야 되는거
+                                                    'MustDoubleMajorSelectPoint': MustDoubleMajorSelectPoint,# 이선 들어야되는거
+                                                    'gradeList': gradeList,
+                                                    'periodList': periodList,
+                                                    'dmajor_list': dmajor_list,
+                                                    'dmajor_select_list': dmajor_select_list,
+                                                    'A': A,
+                                                    'B': B,
+                                                    'C': C,
+                                                    'D': D,
+                                                    'P': P,
+                                                    'notTakeSting': notTakeSting,
+                                                    'majorResult': majorResult,
+                                                    'doubleOn': doubleOn,
+                                                    })
 
 
 

@@ -5,7 +5,6 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 def register(request):
     if request.method == 'POST':
         user_form = CustomUserCreationForm(request.POST)
-        print("ssssssssssssssss")
         if user_form.is_valid():
 
             new_user = user_form.save(commit=False)

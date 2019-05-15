@@ -1,6 +1,9 @@
 import xlrd
 import xlwt
 from collections import OrderedDict  # 중첩된 값 제거
+
+from django.db.models import Q
+
 from accounts.models import TakeList, CustomUser, TakeListPoint, GradeByPeriod
 
 
@@ -172,36 +175,35 @@ def makeTakeList(request):
     total = 0  # 전체
 
     for i in range(0, len(list2)):
-        if list2[i][0] == '공교' or list2[i][0] == '역교':
-            capability += list2[i][3]
+        if list2[i][4] != 'F':
+            if list2[i][0] == '공교' or list2[i][0] == '역교':
+                capability += list2[i][3]
+            elif list2[i][0] == '통교' or list2[i][0] == '핵심':
+                integration += list2[i][3]
+            elif list2[i][0] == '기초':
+                basic += list2[i][3]
+            elif list2[i][0] == '일교':
+                general += list2[i][3]
+            elif list2[i][0] == '개교':
+                pioneer += list2[i][3]
+            elif list2[i][0] == '전선':
+                majorSelect += list2[i][3]
+            elif list2[i][0] == '전필':
+                major += list2[i][3]
+            elif list2[i][0] == '이선':
+                dmajorSelect += list2[i][3]
+            elif list2[i][0] == '이필':
+                dmajor += list2[i][3]
+            total += list2[i][3]
 
-        elif list2[i][0] == '통교' or list2[i][0] == '핵심':
-            integration += list2[i][3]
-        elif list2[i][0] == '기초':
-            basic += list2[i][3]
-
-        elif list2[i][0] == '일교':
-            general += list2[i][3]
-        elif list2[i][0] == '개교':
-            pioneer += list2[i][3]
-        elif list2[i][0] == '전선':
-            majorSelect += list2[i][3]
-        elif list2[i][0] == '전필':
-            major += list2[i][3]
-        elif list2[i][0] == '이선':
-            dmajorSelect += list2[i][3]
-        elif list2[i][0] == '이필':
-            dmajor += list2[i][3]
-        total += list2[i][3]
-
-        takelist = TakeList()
-        takelist.takeListUserName = CustomUser.objects.get(pk=request.user.username)
-        takelist.classification = list2[i][0]
-        takelist.lectureNumber = list2[i][1]
-        takelist.lectureName = list2[i][2]
-        takelist.lecturePoint = float(list2[i][3])
-        takelist.grade = list2[i][4]
-        takelist.save()
+            takelist = TakeList()
+            takelist.takeListUserName = CustomUser.objects.get(pk=request.user.username)
+            takelist.classification = list2[i][0]
+            takelist.lectureNumber = list2[i][1]
+            takelist.lectureName = list2[i][2]
+            takelist.lecturePoint = float(list2[i][3])
+            takelist.grade = list2[i][4]
+            takelist.save()
 
     takelistpoint = TakeListPoint()
     takelistpoint.takeListPointUserName = CustomUser.objects.get(pk=request.user.username)
@@ -216,6 +218,8 @@ def makeTakeList(request):
     takelistpoint.dmajor = dmajor
     takelistpoint.total = total
     takelistpoint.save()
+
+
 
     # 하... 배열이나 리스트 써서 다시 작성하기 위에 로직도.
     # worksheet.write(0, 7, '역량')

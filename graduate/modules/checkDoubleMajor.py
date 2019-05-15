@@ -31,7 +31,7 @@ from accounts.models import TakeListPoint, TakeList
 from graduate.models import MajorPoint, MajorList
 
 
-def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studentSubMajor):
+def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor):
     majorResult = ''
     majorPointChecker = MajorPoint.objects.get(Q(major=studentMajor) & Q(eduYear=eduYear))
     userMajorPoint = TakeListPoint.objects.get(takeListPointUserName=userName)
@@ -41,7 +41,7 @@ def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studen
     # 이필, 이선 학점에서 해당과목 제외
 
     # 국제통상학과 학생이 복수 전공하는 경우
-    if studentMajor == '국제통상학과' and studentDoubleMajor != '해당없음' and studentSubMajor =='해당없음':
+    if studentMajor == '국제통상학과' and studentDoubleMajor != '해당없음':
 
         # 2017년 기준으로 국제통상학과는 "우선전공"과"복수전공"이 나뉜다.
         if eduYear < 2017:
@@ -51,7 +51,7 @@ def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studen
 
         # 사용자가 들은 전필, 전선
         userMajorList = TakeList.objects.filter(
-            Q(takeListUserName=userName) & Q(classification='전필') | Q(classification='전선'))
+            Q(takeListUserName=userName) & (Q(classification='전필') | Q(classification='전선')))
 
         # 복수전공자가 들어야하는 과목 = 복수전공하는 학과의 전필, 전선
         doubleMajorList = MajorList.objects.filter(Q(major=studentDoubleMajor))  # 경영대 전공에서 사용자의 복수전공에 해당하는 강의들 받기
@@ -92,62 +92,56 @@ def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studen
 
 
         # 전필
-        if majorPointChecker.dmajorPoint > userMajorPoint.dmajor:
-            majorResult = '전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
-                majorPointChecker.dmajorPoint, userMajorPoint.dmajor, majorPointChecker.dmajorPoint - userMajorPoint.dmajor)
-        else:
-            majorResult = '전필을 모두 이수 했습니다. 전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
-                majorPointChecker.dmajorPoint, userMajorPoint.dmajor, majorPointChecker.dmajorPoint - userMajorPoint.dmajor)
-        # 전선
-        if majorPointChecker.dmajorSelectPoint > userMajorPoint.dmajorSelect:
-            majorResult += '   \n전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
-                majorPointChecker.dmajorSelectPoint, userMajorPoint.dmajorSelect,
-                majorPointChecker.dmajorSelectPoint - userMajorPoint.dmajorSelect)
-        else:
-            majorResult += '   \n전선을 모두 이수 했습니다. 전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
-                majorPointChecker.dmajorSelectPoint, userMajorPoint.dmajorSelect,
-                majorPointChecker.dmajorSelectPoint - userMajorPoint.dmajorSelect)
+        # if majorPointChecker.dmajorPoint > userMajorPoint.dmajor:
+        #     majorResult = '전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
+        #         majorPointChecker.dmajorPoint, userMajorPoint.dmajor, majorPointChecker.dmajorPoint - userMajorPoint.dmajor)
+        # else:
+        #     majorResult = '전필을 모두 이수 했습니다. 전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
+        #         majorPointChecker.dmajorPoint, userMajorPoint.dmajor, majorPointChecker.dmajorPoint - userMajorPoint.dmajor)
+        # # 전선
+        # if majorPointChecker.dmajorSelectPoint > userMajorPoint.dmajorSelect:
+        #     majorResult += '   \n전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
+        #         majorPointChecker.dmajorSelectPoint, userMajorPoint.dmajorSelect,
+        #         majorPointChecker.dmajorSelectPoint - userMajorPoint.dmajorSelect)
+        # else:
+        #     majorResult += '   \n전선을 모두 이수 했습니다. 전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (
+        #         majorPointChecker.dmajorSelectPoint, userMajorPoint.dmajorSelect,
+        #         majorPointChecker.dmajorSelectPoint - userMajorPoint.dmajorSelect)
 
         userDmajorPoint = userMajorPoint.dmajor + diffMajorPoint
         userDselectPoint = userMajorPoint.dmajorSelect + diffMajorSelectPoint
+
+
         if overlap <= 9:
             if doubleMajorChecker.dmajorPoint > userDmajorPoint:
-                majorResult += '   \n이필 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (
-                    doubleMajorChecker.dmajorPoint, userDmajorPoint, doubleMajorChecker.dmajorPoint - userDmajorPoint,
-                    diffMajorPoint)
+                majorResult += '\n 전필과 겹치는 이필학점 %s' % (diffMajorPoint)
             else:
-                majorResult += '   \n이필을 모두 이수하였습니다. 이필 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (
-                    doubleMajorChecker.dmajorPoint, userDmajorPoint, doubleMajorChecker.dmajorPoint - userDmajorPoint,
-                    diffMajorPoint)
+                majorResult += '\n 전필과 겹치는 이필학점 %s' % (diffMajorPoint)
             # 이선
             if doubleMajorChecker.dmajorSelectPoint > userDselectPoint:
-                majorResult += '   \n이선 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (
-                    doubleMajorChecker.dmajorSelectPoint, userDselectPoint,
-                    doubleMajorChecker.dmajorPoint - userDselectPoint, diffMajorSelectPoint)
+                majorResult += '\n 전선과 겹치는 이선학점 %s' % (diffMajorSelectPoint)
             else:
-                majorResult += '   \n이선을 모두 이수하였습니다. 이선 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (
-                    doubleMajorChecker.dmajorSelectPoint, userDselectPoint,
-                    doubleMajorChecker.dmajorPoint - userDselectPoint, diffMajorSelectPoint)
+                majorResult += '\n 전선과 겹치는 이선학점 %s' % (diffMajorSelectPoint)
         else:  # 중복되는 학점이 9학점 초과시.
             # 이필
-            majorResult += '   \n주의 주전공과 복수전공 동시인정 학점은 "9학점까지" 입니다. 현재 중복학점 = %s' % overlap
-            majorResult += '   \n이필 요구학점 %s, 수강한 학점 %s, 주전공과 겹치는 학점 %s' % (
-                doubleMajorChecker.dmajorPoint, userDmajorPoint, diffMajorPoint)
+            majorResult += '\n ☆주의☆ 주전공과 복수전공 동시인정 학점은 "9학점까지" 입니다. 현재 중복학점 = %s' % overlap
+            majorResult += '\n 전필과 겹치는 이필학점 %s' % (diffMajorPoint)
             # 이선
-            majorResult += '   \n이선 요구학점 %s, 수강한 학점 %s, 주전공과 겹치는 학점 %s' % (
-                doubleMajorChecker.dmajorSelectPoint, userDselectPoint, diffMajorSelectPoint)
+            majorResult += '\n  전선과 겹치는 이선학점 %s' % (diffMajorSelectPoint)
 
 
 
             # 사용자가 들은 이필, 이선 필수 과목 확인
             userDoubleMajorList = TakeList.objects.filter(
-                Q(takeListUserName=userName) & Q(classification='이필') | Q(classification='이선') | Q(
-                    classification='전선') | Q(classification='전필'))
+                Q(takeListUserName=userName) & (
+                            Q(classification='이필') | Q(classification='이선') | Q(classification='전선') | Q(
+                        classification='전필')))
 
             doubleMajorMustList = MajorList.objects.filter(Q(major=studentDoubleMajor) & Q(checkDoubleMajor=1))
 
             MustTakeList = []
             userMustTakeList = []
+            notTakeList = []
             for doubleMajor in doubleMajorMustList:
                 MustTakeList.append(doubleMajor.lectureName)
 
@@ -156,17 +150,23 @@ def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studen
                     if userDoubleMajor.lectureNumber == doubleMajorMust.lectureNum:
                         userMustTakeList.append(userDoubleMajor.lectureName)
                         break
+            for MustTake in MustTakeList:
+                if MustTake not in userMustTakeList:
+                    notTakeList.append(MustTake)
 
-            return majorResult, MustTakeList, userMustTakeList
+            notTakeSting = ''
+            if len(notTakeList) != 0:
+                notTakeSting = ",".join(notTakeList) + '를 들어야 합니다.'
+            return notTakeSting, majorResult
 
 
     # 복수 전공 하되, 국제통상 아닌 경우
     #   1.필수 과목 다 들었는지
     #   2.9학점 초과하는 지
-    elif studentDoubleMajor !='해당없음' and studentSubMajor =='해당없음':
+    elif studentDoubleMajor !='해당없음' :
         # 사용자가 들은 전필, 전선
         userMajorList = TakeList.objects.filter(
-            Q(takeListUserName=userName) & Q(classification='전필') | Q(classification='전선'))
+            Q(takeListUserName=userName) & (Q(classification='전필') | Q(classification='전선')))
 
         # 복수전공자가 들어야하는 과목 = 복수전공하는 학과의 전필, 전선
         doubleMajorList = MajorList.objects.filter(Q(major=studentDoubleMajor))  # 경영대 전공에서 사용자의 복수전공에 해당하는 강의들 받기
@@ -198,51 +198,50 @@ def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studen
 
         if eduYear > 2014 and studentDoubleMajor == '회계학과':
             for userMajor in userMajorList:
-                if userMajor.lectureNumber == 'BAA40040':
+                if userMajor.lectureNumber == 'BAA40040': #고급회계 회계학과 전필 증가
                     diffMajorPoint += 3
                     diffMajorSelectPoint -= 3
                     break
 
-        # 전필
-        if majorPointChecker.dmajorPoint > userMajorPoint.major:
-            majorResult = '전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorPoint, userMajorPoint.major, majorPointChecker.dmajorPoint-userMajorPoint.major)
-        else:
-            majorResult = '전필을 모두 이수 했습니다. 전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorPoint, userMajorPoint.major, majorPointChecker.dmajorPoint-userMajorPoint.major)
-        # 전선
-        if majorPointChecker.majorSelectPoint > userMajorPoint.majorSelect:
-            majorResult += '\n전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorSelectPoint, userMajorPoint.majorSelect, majorPointChecker.dmajorSelectPoint-userMajorPoint.majorSelect)
-        else:
-            majorResult += '\n전선을 모두 이수 했습니다. 전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorSelectPoint, userMajorPoint.majorSelect, majorPointChecker.dmajorSelectPoint-userMajorPoint.majorSelect)
+        # 전필 # 자기학과 전필도 줄어듬.      # 사용자가 들은 전필
+        # if majorPointChecker.dmajorPoint > userMajorPoint.major:
+        #     majorResult = '전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorPoint, userMajorPoint.major, majorPointChecker.dmajorPoint-userMajorPoint.major)
+        # else:
+        #     majorResult = '전필을 모두 이수 했습니다. 전필 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorPoint, userMajorPoint.major, majorPointChecker.dmajorPoint-userMajorPoint.major)
+        # # 전선
+        # if majorPointChecker.majorSelectPoint > userMajorPoint.majorSelect:
+        #     majorResult += '\n전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorSelectPoint, userMajorPoint.majorSelect, majorPointChecker.dmajorSelectPoint-userMajorPoint.majorSelect)
+        # else:
+        #     majorResult += '\n전선을 모두 이수 했습니다. 전선 요구학점 %s, 수강한 학점 %s, 남은학점 %s' % (majorPointChecker.dmajorSelectPoint, userMajorPoint.majorSelect, majorPointChecker.dmajorSelectPoint-userMajorPoint.majorSelect)
 
         userDmajorPoint = userMajorPoint.dmajor+diffMajorPoint
         userDselectPoint = userMajorPoint.dmajorSelect+diffMajorSelectPoint
         if overlap <= 9:
             if doubleMajorChecker.dmajorPoint > userDmajorPoint:
-                majorResult += '\n이필 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (doubleMajorChecker.dmajorPoint, userDmajorPoint, doubleMajorChecker.dmajorPoint-userDmajorPoint, diffMajorPoint)
+                majorResult += '\n 전필과 겹치는 이필학점 %s' % (diffMajorPoint)
             else:
-                majorResult += '\n이필을 모두 이수하였습니다. 이필 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (doubleMajorChecker.dmajorPoint, userDmajorPoint, doubleMajorChecker.dmajorPoint-userDmajorPoint, diffMajorPoint)
+                majorResult += '\n 전필과 겹치는 이필학점 %s' % (diffMajorPoint)
             # 이선
             if doubleMajorChecker.dmajorSelectPoint > userDselectPoint:
-                majorResult += '\n이선 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (doubleMajorChecker.dmajorSelectPoint, userDselectPoint, doubleMajorChecker.dmajorPoint-userDselectPoint, diffMajorSelectPoint)
+                majorResult += '\n 전선과 겹치는 이선학점 %s' % (diffMajorSelectPoint)
             else:
-                majorResult += '\n이선을 모두 이수하였습니다. 이선 요구학점 %s, 수강한 학점 %s, 남은학점 %s, 주전공과 겹치는 학점 %s' % (doubleMajorChecker.dmajorSelectPoint, userDselectPoint, doubleMajorChecker.dmajorPoint-userDselectPoint, diffMajorSelectPoint)
+                majorResult += '\n 전선과 겹치는 이선학점 %s' % (diffMajorSelectPoint)
         else: # 중복되는 학점이 9학점 초과시.
             #이필
-            majorResult += '\n주의 주전공과 복수전공 동시인정 학점은 "9학점까지" 입니다. 현재 중복학점 = %s' % overlap
-            majorResult += '\n이필 요구학점 %s, 수강한 학점 %s, 주전공과 겹치는 학점 %s' % (
-                doubleMajorChecker.dmajorPoint, userDmajorPoint, diffMajorPoint)
+            majorResult += '\n ☆주의☆ 주전공과 복수전공 동시인정 학점은 "9학점까지" 입니다. 현재 중복학점 = %s' % overlap
+            majorResult += '\n 전필과 겹치는 이필학점 %s' % (diffMajorPoint)
             # 이선
-            majorResult += '\n이선 요구학점 %s, 수강한 학점 %s, 주전공과 겹치는 학점 %s' % (
-                doubleMajorChecker.dmajorSelectPoint, userDselectPoint, diffMajorSelectPoint)
+            majorResult += '\n 전선과 겹치는 이선학점 %s' % (diffMajorSelectPoint)
 
         # 사용자가 들은 이필, 이선 필수 과목 확인
         userDoubleMajorList = TakeList.objects.filter(
-            Q(takeListUserName=userName) & Q(classification='이필') | Q(classification='이선') | Q(classification='전선') | Q(classification='전필'))
+            Q(takeListUserName=userName) & (Q(classification='이필') | Q(classification='이선') | Q(classification='전선') | Q(classification='전필')))
 
         doubleMajorMustList = MajorList.objects.filter(Q(major=studentDoubleMajor) & Q(checkDoubleMajor=1))
 
         MustTakeList = []
         userMustTakeList = []
+        notTakeList = []
         for doubleMajor in doubleMajorMustList:
             MustTakeList.append(doubleMajor.lectureName)
 
@@ -253,5 +252,11 @@ def checkDobuleMajor(userName, eduYear, studentMajor, studentDoubleMajor, studen
                 if userDoubleMajor.lectureNumber == doubleMajorMust.lectureNum:
                     userMustTakeList.append(userDoubleMajor.lectureName)
                     break
+        for MustTake in MustTakeList:
+            if MustTake not in userMustTakeList:
+                notTakeList.append(MustTake)
 
-        return majorResult, MustTakeList, userMustTakeList
+        notTakeSting =''
+        if len(notTakeList) !=0:
+            notTakeSting =",".join(notTakeList)+'를 들어야 합니다.'
+        return notTakeSting, majorResult

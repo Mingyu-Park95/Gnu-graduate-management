@@ -10,6 +10,7 @@ def accountTrack_Judge(userName, eduYear, studentMajor):
     user_takeBasic_point = 0
     user_takeAdvance_point = 0
     resultValue = []
+    user_takeTrack_list =[]
 
     total_track_Basic = 27
     total_track_Advance = 9
@@ -27,8 +28,8 @@ def accountTrack_Judge(userName, eduYear, studentMajor):
     # 트랙기본 이수 개수 확인
     for db_Basic in db_Basic_list:
         if db_Basic in user_Take_list:
-            user_takeBasic_point += Track.objects.get(
-                Q(lectureNum=db_Basic) & Q(trackName="세무전문트랙") & Q(seperate="트랙기본")).lecturePoint
+            user_takeBasic_point += Track.objects.get(Q(lectureNum=db_Basic) & Q(trackName="세무전문트랙") & Q(seperate="트랙기본")).lecturePoint
+            user_takeTrack_list.append(TakeList.objects.get(Q(lectureNumber=db_Basic) & Q(takeListUserName=userName)))
 
     if user_takeBasic_point >= total_track_Basic:
         resultValue.append("트랙기본 이수 / ")
@@ -40,10 +41,11 @@ def accountTrack_Judge(userName, eduYear, studentMajor):
         if db_Advance in user_Take_list:
             user_takeAdvance_point += Track.objects.get(
                 Q(lectureNum=db_Advance)& Q(trackName="세무전문트랙") & Q(seperate="트랙심화")).lecturePoint
+            user_takeTrack_list.append(TakeList.objects.get(Q(lectureNumber=db_Advance) & Q(takeListUserName=userName)))
 
     if user_takeAdvance_point >= total_track_Advance:
         resultValue.append("트랙심화 이수")
     else:
         resultValue.append("트랙심화 {0}학점이 부족합니다.".format(total_track_Advance - user_takeAdvance_point))
 
-    return resultValue
+    return resultValue, user_takeTrack_list

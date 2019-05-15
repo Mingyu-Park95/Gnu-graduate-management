@@ -2,7 +2,7 @@
 {% block title %}- report{% endblock %}
 {% load staticfiles %}
 {% block content %}
-<!DOCTYPE html>
+
 
 <html lang="en">
 
@@ -11,7 +11,7 @@
                   <div class="container-fluid">
                     <div class="row">
 
-                      {% if a != "x" %}
+
                       <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="card card-stats">
                           <div class="card-header card-header-danger card-header-icon">
@@ -25,13 +25,15 @@
                           </div>
                           <div class="card-footer">
                             <div class="stats">
+                              {% if userTakePoint.major < MustMajorPoint %}
                               <i class="material-icons text-danger">warning</i>
                               <a href="#pablo">전공필수 학점이 부족합니다.</a>
+                              {% endif %}
                             </div>
                           </div>
                         </div>
                       </div>
-                      {% endif %}
+
                       <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="card card-stats">
                           <div class="card-header card-header-success card-header-icon">
@@ -45,12 +47,70 @@
                           </div>
                           <div class="card-footer">
                             <div class="stats">
+                              {% if userTakePoint.majorSelect < MustMajorSelectPoint %}
                                 <i class="material-icons text-danger">warning</i>
                                 <a href="#pablo">전공선택 학점이 부족합니다.</a>
+                               {% endif %}
                             </div>
                           </div>
                         </div>
                       </div>
+
+
+
+
+
+                      {% if doubleOn == "on" %}
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-danger card-header-icon">
+                            <div class="card-icon">
+                              <i class="fa fa-check-square"></i>
+                            </div>
+                            <p class="card-category">이필</p>
+                            <h3 class="card-title">{{userTakePoint.dmajor}}/{{MustDoubleMajorPoint}}
+                              <p><small>학점</small></p>
+                            </h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              {% if userTakePoint.dmajor < MustDoubleMajorPoint %}
+                              <i class="material-icons text-danger">warning</i>
+                              <a href="#pablo">이필 학점이 부족합니다.</a>
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-success card-header-icon">
+                            <div class="card-icon">
+                              <i class="fa fa-check-square-o"></i>
+                            </div>
+                            <p class="card-category">이선</p>
+                            <h3 class="card-title">{{ userTakePoint.dmajorSelect }}/ {{ MustDoubleMajorSelectPoint }}
+                                <p><small>학점</small></p>
+                            </h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              {% if userTakePoint.dmajorSelect < MustDoubleMajorSelectPoint %}
+                                <i class="material-icons text-danger">warning</i>
+                                <a href="#pablo">이선 학점이 부족합니다.</a>
+                               {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {% endif %}
+
+
+
+
+
                       <div class="col-lg-3 col-md-6 col-sm-6">
                           <div class="card card-stats">
                             <div class="card-header card-header-info card-header-icon">
@@ -103,8 +163,10 @@
                           </div>
                           <div class="card-footer">
                             <div class="stats">
+                              {% if userTakePoint.basic < mustTakeRefinePoint.basicPoint %}
                                 <i class="material-icons text-danger">warning</i>
                                 <a href="#pablo">기초과정 학점이 부족합니다.</a>
+                              {% endif %}
                             </div>
                           </div>
                         </div>
@@ -117,7 +179,7 @@
                               <i class="fa fa-handshake-o"></i>
                             </div>j
                             <p class="card-category">일반교양(개척)</p>
-                            <h3 class="card-title">{{pioneerPoint}}{% if eduYear >= 2017 %}/6{% endif %}
+                            <h3 class="card-title">{{userPioneerPoint}}{% if eduYear >= 2017 %}/6{% endif %}
                                 <p><small>학점</small></p>
                             </h3>
                           </div>
@@ -142,8 +204,10 @@
                             </div>
                             <div class="card-footer">
                               <div class="stats">
+                                {% if userTakePoint.integration < 10 %}
                                 <i class="material-icons text-danger">warning</i>
                                 <a href="#pablo">핵심교양 학점이 부족합니다.</a>
+                                {% endif %}
                               </div>
                             </div>
                           </div>
@@ -162,8 +226,10 @@
                             </div>
                             <div class="card-footer">
                               <div class="stats">
+                                {% if userTakePoint.capability < 10 %}
                                   <i class="material-icons text-danger">warning</i>
                                   <a href="#pablo">공통교양 학점이 부족합니다.</a>
+                                {% endif %}
                               </div>
                             </div>
                           </div>
@@ -176,11 +242,16 @@
                           <div class="card-header card-header-success">
                             <div class="ct-chart" id="dailySalesChart"></div>
                             <script>
-                                new Chartist.Line('#dailySalesChart', 
+                                ab = {{ gradeList }};
+                                period = "{{ periodList }}";
+                                period = period.split("a");
+                                console.log(period);
+                                console.log(ab.length);
+                                new Chartist.Line('#dailySalesChart',
                                 {
-                                  labels: ['1-1', '1-2', '2-1', '2-2', '3-1', '3-2', '4-1','4-2','기타'],
-                                  series: [[3.8,3.2,4.2,4.0,4.5,3.6,3.9,4,4.5]],
-                                }, 
+                                  labels: period,
+                                  series: [ab],
+                                },
                                 {
                                    lineSmooth: Chartist.Interpolation.cardinal
                                    ({tension: 0}),
@@ -202,18 +273,23 @@
                           </div>
                         </div>
                       </div>
-          
+
                       <div class="col-md-4">
                         <div class="card card-chart">
                           <div class="card-header card-header-warning">
                             <div class="ct-chart" id="websiteViewsChart"></div>
                             <script>
-                                new Chartist.Pie('#websiteViewsChart', 
+                                A = {{A}};
+                                B = {{B}};
+                                C = {{C}};
+                                D = {{D}};
+                                P = {{P}};
+                                new Chartist.Pie('#websiteViewsChart',
                                 {
-                                  labels: ['J', 'F', 'M', 'A', 'M'],
-                                  series: [52, 4, 30, 70, 55]
-                                
-                                }, 
+                                  labels: ['A', 'B', 'C','D','P'],
+                                  series: [A, B, C, D,P],
+
+                                },
                                 {
                                   donut:true,
                                   donutWidth: 60,
@@ -268,10 +344,11 @@
                                     </a>
                                   </li>
                                 </ul>
-                                
                               </div>
                             </div>
                           </div>
+
+
                           <div class="card-body">
                             <div class="tab-content">
                               <div class="tab-pane active" id="profile">   <!--공통교양-->
@@ -281,15 +358,21 @@
                                         <th>학점</th>
                                         <th>성적</th>
                                       </thead>
-                                      <tbody>
-                                      {% for common in commons %}
+                                    <tbody>
+                                      {% for integration in integration_list %}
                                         <tr>
-                                          <td>{{common.lectureName}}</td>
-                                          <td>{{common.lecturePoint}}</td>
-                                          <td>{{common.grade}}</td>
+                                          <td>{{integration.lectureName}}</td>
+                                          <td>{{integration.lecturePoint}}</td>
+                                          <td>{{integration.grade}}</td>
                                         </tr>
-                                      {% endfor %}
+                                      {% endfor%}
+
+                                        <i class="material-icons text-info">bookmark</i>
+                                       <a >{{Capability_str}}</a>
+
+
                                       </tbody>
+
                                     </table>
                               </div>
                               <div class="tab-pane" id="messages">   <!--핵심(통합)-->
@@ -300,30 +383,22 @@
                                       <th>성적</th>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>핵시핵해새</td>
-                                        <td>미이수</td>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td>자원과환경</td>
-                                        <td>이수</td>
-                                        <td>A+</td>
-                                      </tr>
-                                      <tr>
-                                        <td>3</td>
-                                        <td>Sage Rodriguez</td>
-                                        <td>$56,142</td>
-                                      </tr>
-                                      <tr>
-                                        <td>4</td>
-                                        <td>Philip Chaney</td>
-                                        <td>$38,735</td>
-                                      </tr>
+                                      {% for capability in capability_list %}
+                                        <tr>
+                                          <td>{{capability.lectureName}}</td>
+                                          <td>{{capability.lecturePoint}}</td>
+                                          <td>{{capability.grade}}</td>
+
+                                        </tr>
+                                      {% endfor%}
+
+                                        <i class="material-icons text-info">bookmark</i>
+                                       <a >{{Integration_str}}</a>
+
                                       </tbody>
                                     </table>
                               </div>
-                              <div class="tab-pane" id="settings">
+                              <div class="tab-pane" id="settings"> <!--기초-->
                                 <table class="table table-hover">
                                   <thead class="text-warning">
                                     <th>강의명</th>
@@ -331,35 +406,21 @@
                                     <th>성적</th>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>핵시핵해새</td>
-                                      <td>미이수</td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td>자원과환경</td>
-                                      <td>이수</td>
-                                      <td>A+</td>
-                                    </tr>
-                                    <tr>
-                                      <td>3</td>
-                                      <td>Sage Rodriguez</td>
-                                      <td>$56,142</td>
-                                    </tr>
-                                    <tr>
-                                      <td>4</td>
-                                      <td>Philip Chaney</td>
-                                      <td>$38,735</td>
-                                    </tr>
-                                    <tr>
-                                      <td>4</td>
-                                      <td>Philip Chaney</td>
-                                      <td>$38,735</td>
-                                    </tr>
-                              </tbody>
+                                      {% for basic in basic_list %}
+                                        <tr>
+                                          <td>{{basic.lectureName}}</td>
+                                          <td>{{basic.lecturePoint}}</td>
+                                          <td>{{basic.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
+
+                                       <i class="material-icons text-info">bookmark</i>
+                                       <a >{{Basic_str}}</a>
+
+                                      </tbody>
                             </table>
                               </div>
-                              <div class="tab-pane" id="pionner">
+                              <div class="tab-pane" id="pionner"> <!--개척-->
                                 <table class="table table-hover">
                                   <thead class="text-warning">
                                     <th>강의명</th>
@@ -367,27 +428,18 @@
                                     <th>성적</th>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>핵1해새</td>
-                                      <td>미이수</td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td>자원과환경</td>
-                                      <td>이수</td>
-                                      <td>A+</td>
-                                    </tr>
-                                    <tr>
-                                      <td>3</td>
-                                      <td>Sage Rodriguez</td>
-                                      <td>$56,142</td>
-                                    </tr>
-                                    <tr>
-                                      <td>4</td>
-                                      <td>Philip Chaney</td>
-                                      <td>$38,735</td>
-                                    </tr>
-                              </tbody>
+                                      {% for pioneer in pioneer_list %}
+                                        <tr>
+                                          <td>{{pioneer.lectureName}}</td>
+                                          <td>{{pioneer.lecturePoint}}</td>
+                                          <td>{{pioneer.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
+
+                                          <i class="material-icons text-info">bookmark</i>
+                                       <a >{{Pioneer_str}}</a>
+
+                                      </tbody>
                             </table>
                               </div>
                             </div>
@@ -397,14 +449,14 @@
 
 
 
-                      
+
                       <div class="col-lg-6 col-md-12">
                         <div class="card">
                           <div class="card-header card-header-tabs card-header-warning">
                             <div class="nav-tabs-navigation">
                               <div class="nav-tabs-wrapper">
                                 <span class="nav-tabs-title" style="font-size:17px">전공:</span>
-          
+
                                 <ul class="nav nav-tabs" data-tabs="tabs">
                                   <li class="nav-item">
                                     <a class="nav-link active" href="#major1" data-toggle="tab">
@@ -432,13 +484,13 @@
                                   </li>
 
                                 </ul>
-                                
+
                               </div>
                             </div>
                           </div>
                           <div class="card-body">
                             <div class="tab-content">
-                              <div class="tab-pane active" id="major1">   <!--공통교양-->
+                              <div class="tab-pane active" id="major1">   <!--전필-->
                                   <table class="table table-hover">
                                       <thead class="text-warning">
                                         <th>강의명</th>
@@ -446,30 +498,17 @@
                                         <th>성적</th>
                                       </thead>
                                       <tbody>
+                                      {% for major in major_list %}
                                         <tr>
-                                          <td>현대사회스포츠</td>
-                                          <td>미이수</td>
-                                          <td></td>
+                                          <td>{{major.lectureName}}</td>
+                                          <td>{{major.lecturePoint}}</td>
+                                          <td>{{major.grade}}</td>
                                         </tr>
-                                        <tr>
-                                          <td>자원과환경</td>
-                                          <td>이수</td>
-                                          <td>A+</td>
-                                        </tr>
-                                        <tr>
-                                          <td>3</td>
-                                          <td>Sage Rodriguez</td>
-                                          <td>$56,142</td>
-                                        </tr>
-                                        <tr>
-                                          <td>4</td>
-                                          <td>Philip Chaney</td>
-                                          <td>$38,735</td>
-                                        </tr>
+                                      {% endfor%}
                                       </tbody>
                                     </table>
                               </div>
-                              <div class="tab-pane" id="major2">   <!--핵심(통합)-->
+                              <div class="tab-pane" id="major2">   <!--전선-->
                                   <table class="table table-hover">
                                     <thead class="text-warning">
                                       <th>강의명</th>
@@ -477,26 +516,13 @@
                                       <th>성적</th>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>핵시핵해새</td>
-                                        <td>미이수</td>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td>자원과환경</td>
-                                        <td>이수</td>
-                                        <td>A+</td>
-                                      </tr>
-                                      <tr>
-                                        <td>3</td>
-                                        <td>Sage Rodriguez</td>
-                                        <td>$56,142</td>
-                                      </tr>
-                                      <tr>
-                                        <td>4</td>
-                                        <td>Philip Chaney</td>
-                                        <td>$38,735</td>
-                                      </tr>
+                                      {% for major_select in major_select_list %}
+                                        <tr>
+                                          <td>{{major_select.lectureName}}</td>
+                                          <td>{{major_select.lecturePoint}}</td>
+                                          <td>{{major_select.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
                                       </tbody>
                                     </table>
                               </div>
@@ -508,27 +534,16 @@
                                     <th>성적</th>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>핵시핵해새</td>
-                                      <td>미이수</td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td>자원과환경</td>
-                                      <td>이수</td>
-                                      <td>A+</td>
-                                    </tr>
-                                    <tr>
-                                      <td>3</td>
-                                      <td>Sage Rodriguez</td>
-                                      <td>$56,142</td>
-                                    </tr>
-                                    <tr>
-                                      <td>4</td>
-                                      <td>Philip Chaney</td>
-                                      <td>$38,735</td>
-                                    </tr>
-                              </tbody>
+                                      {% for dmajor in dmajor_list %}
+                                        <tr>
+                                          <td>{{dmajor.lectureName}}</td>
+                                          <td>{{dmajor.lecturePoint}}</td>
+                                          <td>{{dmajor.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
+                                   <i class="material-icons text-info">bookmark</i>
+                                      <a >{{notTakeSting}}<br>{{majorResult}}</a>
+                                      </tbody>
                             </table>
                               </div>
                               <div class="tab-pane" id="major4">
@@ -539,27 +554,14 @@
                                     <th>성적</th>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>핵1해새</td>
-                                      <td>미이수</td>
-                                      <td></td>
-                                    </tr>
-                                    <tr>
-                                      <td>자원과환경</td>
-                                      <td>이수</td>
-                                      <td>A+</td>
-                                    </tr>
-                                    <tr>
-                                      <td>3</td>
-                                      <td>Sage Rodriguez</td>
-                                      <td>$56,142</td>
-                                    </tr>
-                                    <tr>
-                                      <td>4</td>
-                                      <td>Philip Chaney</td>
-                                      <td>$38,735</td>
-                                    </tr>
-                              </tbody>
+                                      {% for dmajor_select in dmajor_select_list %}
+                                        <tr>
+                                          <td>{{dmajor_select.lectureName}}</td>
+                                          <td>{{dmajor_select.lecturePoint}}</td>
+                                          <td>{{dmajor_select.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
+                                      </tbody>
                             </table>
                               </div>
                             </div>
@@ -580,59 +582,100 @@
                                 <div class="nav-tabs-navigation">
                                   <div class="nav-tabs-wrapper">
                                     <span class="nav-tabs-title" style="font-size:17px">기타:</span>
-              
+
                                     <ul class="nav nav-tabs" data-tabs="tabs">
-                                      <li class="nav-item">
+                                           <li class="nav-item">
                                         <a class="nav-link active" href="#etc1" data-toggle="tab">
+                                          <i class="material-icons">child_care</i> 융합전공필수
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                           <li class="nav-item">
+                                        <a class="nav-link " href="#etc2" data-toggle="tab">
+                                          <i class="material-icons">child_care</i> 융합전공선택
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link " href="#etc3" data-toggle="tab">
                                           <i class="material-icons">child_care</i> 트랙제
                                           <div class="ripple-container"></div>
                                         </a>
                                       </li>
                                       <li class="nav-item">
-                                        <a class="nav-link" href="#etc2" data-toggle="tab">
-                                          <i class="material-icons">school</i> 교직이수
+                                        <a class="nav-link" href="#etc4" data-toggle="tab">
+                                          <i class="material-icons">donut_small</i> 교직이수
                                           <div class="ripple-container"></div>
                                         </a>
                                       </li>
                                     </ul>
-                                    
+
                                   </div>
                                 </div>
                               </div>
                               <div class="card-body">
                                 <div class="tab-content">
-                                  <div class="tab-pane active" id="etc1">   <!--공통교양-->
+                                  <div class="tab-pane active" id="etc1">   <!--융합 전필-->
                                       <table class="table table-hover">
                                           <thead class="text-warning">
                                             <th>강의명</th>
                                             <th>학점</th>
                                             <th>성적</th>
                                           </thead>
-                                          <tbody>
-                                            <tr>
-                                              <td>현대사회스포츠</td>
-                                              <td>미이수</td>
-                                              <td></td>
-                                            </tr>
-                                            <tr>
-                                              <td>자원과환경</td>
-                                              <td>이수</td>
-                                              <td>A+</td>
-                                            </tr>
-                                            <tr>
-                                              <td>3</td>
-                                              <td>Sage Rodriguez</td>
-                                              <td>$56,142</td>
-                                            </tr>
-                                            <tr>
-                                              <td>4</td>
-                                              <td>Philip Chaney</td>
-                                              <td>$38,735</td>
-                                            </tr>
-                                          </tbody>
+                                           <tbody>
+                                      {% for convergence in convergence_list %}
+                                        <tr>
+                                          <td>{{convergence.lectureName}}</td>
+                                          <td>{{convergence.lecturePoint}}</td>
+                                          <td>{{convergence.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
+                                          <i class="material-icons text-info">bookmark</i>
+                                       <a >{{convergenceMajor_str}}</a>
+                                      </tbody>
                                         </table>
                                   </div>
-                                  <div class="tab-pane" id="etc2">   <!--핵심(통합)-->
+                                  <div class="tab-pane" id="etc2">   <!--융합 전선-->
+                                      <table class="table table-hover">
+                                        <thead class="text-warning">
+                                          <th>강의명</th>
+                                          <th>학점</th>
+                                          <th>성적</th>
+                                        </thead>
+                                        <tbody>
+                                      {% for takeConvergence in takeConvergence_list %}
+                                        <tr>
+                                          <td>{{takeConvergence.lectureName}}</td>
+                                          <td>{{takeConvergence.lecturePoint}}</td>
+                                          <td>{{takeConvergence.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
+                                      </tbody>
+                                        </table>
+                                  </div>
+
+                                   <div class="tab-pane" id="etc3">   <!--트랙제-->
+                                      <table class="table table-hover">
+                                        <thead class="text-warning">
+                                          <th>강의명</th>
+                                          <th>학점</th>
+                                          <th>성적</th>
+                                        </thead>
+                                        <tbody>
+                                      {% for takeTrack in takeTrack_list %}
+                                        <tr>
+                                          <td>{{takeTrack.lectureName}}</td>
+                                          <td>{{takeTrack.lecturePoint}}</td>
+                                          <td>{{takeTrack.grade}}</td>
+                                        </tr>
+                                      {% endfor%}
+                                       <i class="material-icons text-info">bookmark</i>
+                                       <a >{{Track_str}}</a>
+                                      </tbody>
+                                        </table>
+                                  </div>
+
+                                   <div class="tab-pane" id="etc4">   <!--교직이수-->
                                       <table class="table table-hover">
                                         <thead class="text-warning">
                                           <th>강의명</th>
@@ -662,12 +705,17 @@
                                           </tr>
                                           </tbody>
                                         </table>
-                                  </div>    
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                     </div>
+
+
+
+
+
                   </div>
                 </div>
                 
