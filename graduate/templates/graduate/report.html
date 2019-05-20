@@ -237,7 +237,7 @@
                     </div>
 
                     <div class="row">
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="card card-chart">
                           <div class="card-header card-header-success">
                             <div class="ct-chart" id="dailySalesChart"></div>
@@ -269,15 +269,15 @@
                           <div class="card-body">
                             <h4 class="card-title">학기별 학점 그래프</h4>
                             <p class="card-category">
-                              <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+
                           </div>
                         </div>
                       </div>
 
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="card card-chart">
                           <div class="card-header card-header-warning">
-                            <div class="ct-chart" id="websiteViewsChart"></div>
+                            <div class="ct-chart ct-slice-donut-solid" id="websiteViewsChart"></div>
                             <script>
                                 A = {{A}};
                                 B = {{B}};
@@ -287,7 +287,7 @@
                                 new Chartist.Pie('#websiteViewsChart',
                                 {
                                   labels: ['A', 'B', 'C','D','P'],
-                                  series: [A, B, C, D,P],
+                                  series: [A, B, C, D, P],
 
                                 },
                                 {
@@ -297,19 +297,19 @@
                                   startAngle: 270,
                                   showLabel: true
                                 }
-      );
+                                );
                             </script>
                           </div>
                           <div class="card-body">
-                            <h4 class="card-title">Email Subscriptions</h4>
-                            <p class="card-category">Last Campaign Performance</p>
+                            <h4 class="card-title">학점 비율표</h4>
+
                           </div>
-          
+
                         </div>
                       </div>
 
                     </div>
-          
+
                     <div class="row">
                       <div class="col-lg-6 col-md-12">
                         <div class="card">
@@ -317,7 +317,7 @@
                             <div class="nav-tabs-navigation">
                               <div class="nav-tabs-wrapper">
                                 <span class="nav-tabs-title" style="font-size:17px">교양:</span>
-          
+
                                 <ul class="nav nav-tabs" data-tabs="tabs">
                                   <li class="nav-item">
                                     <a class="nav-link active" href="#profile" data-toggle="tab">
@@ -602,12 +602,6 @@
                                           <div class="ripple-container"></div>
                                         </a>
                                       </li>
-                                      <li class="nav-item">
-                                        <a class="nav-link" href="#etc4" data-toggle="tab">
-                                          <i class="material-icons">donut_small</i> 교직이수
-                                          <div class="ripple-container"></div>
-                                        </a>
-                                      </li>
                                     </ul>
 
                                   </div>
@@ -672,38 +666,6 @@
                                        <i class="material-icons text-info">bookmark</i>
                                        <a >{{Track_str}}</a>
                                       </tbody>
-                                        </table>
-                                  </div>
-
-                                   <div class="tab-pane" id="etc4">   <!--교직이수-->
-                                      <table class="table table-hover">
-                                        <thead class="text-warning">
-                                          <th>강의명</th>
-                                          <th>학점</th>
-                                          <th>성적</th>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>핵시핵해새</td>
-                                            <td>미이수</td>
-                                            <td></td>
-                                          </tr>
-                                          <tr>
-                                            <td>자원과환경</td>
-                                            <td>이수</td>
-                                            <td>A+</td>
-                                          </tr>
-                                          <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                          </tr>
-                                          <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                          </tr>
-                                          </tbody>
                                         </table>
                                   </div>
                                 </div>

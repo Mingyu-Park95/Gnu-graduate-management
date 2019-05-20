@@ -2,29 +2,630 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf376a30-506b-4476-b21a-8dc226fc793b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a/ruddud14" beforeDir="false" afterPath="$PROJECT_DIR$/a/ruddud14" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a/z" beforeDir="false" afterPath="$PROJECT_DIR$/a/z" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/wlgma11" beforeDir="false" afterPath="$PROJECT_DIR$/a/wlgma11" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/templates/registration/manual.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/manual.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/register_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/userChange.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/userChange.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/userChange_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/userChange_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/checkBasic.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/checkBasic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/checkDoubleMajor.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/checkDoubleMajor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/judgeConvergence.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/judgeConvergence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/judgeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/judgeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/makeTakeList.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/makeTakeList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/track_Account.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/track_Account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/track_Channel.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/track_Channel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/track_Finance.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/track_Finance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/modules/track_IT.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/modules/track_IT.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graduate/templates/graduate/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/templates/graduate/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduate/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/graduate/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/chart/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/chart/chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/css/util.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/css/util.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Black.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Black.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-BlackItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-BlackItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraLight.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-LightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-LightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-MediumItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-MediumItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-SemiBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Thin.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-Thin.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ThinItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/Montserrat-ThinItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/montserrat/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/montserrat/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Black.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Black.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-BlackItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-BlackItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraBoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraLight.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraLight.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraLightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-LightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-LightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-MediumItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-MediumItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-SemiBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-SemiBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-SemiBoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Thin.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-Thin.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ThinItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/poppins/Poppins-ThinItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/UFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/UFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-LightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-LightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-MediumItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-MediumItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/fonts/ubuntu/Ubuntu-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/images/icons/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/images/icons/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/images/icons/icon-google.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/images/icons/icon-google.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/images/icons/map-marker.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/images/icons/map-marker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/images/icons/symbol-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/images/icons/symbol-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/animate/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/animate/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/animsition/css/animsition.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/animsition/css/animsition.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/animsition/css/animsition.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/animsition/css/animsition.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/animsition/js/animsition.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/animsition/js/animsition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/animsition/js/animsition.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/animsition/js/animsition.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/bootstrap/js/tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/countdowntime/countdowntime.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/countdowntime/countdowntime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/css-hamburgers/hamburgers.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/daterangepicker/daterangepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/daterangepicker/daterangepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/daterangepicker/daterangepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/daterangepicker/daterangepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/daterangepicker/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/daterangepicker/moment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/daterangepicker/moment.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/daterangepicker/moment.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/jquery/jquery-3.2.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/select2/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/select2/select2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/select2/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/select2/select2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/select2/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/select2/select2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login/vendor/select2/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/vendor/select2/select2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/css/normalize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/css/normalize.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/js/jquery-1.11.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/js/jquery.nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/js/jquery.nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shAutoloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shAutoloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushAS3.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushAS3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushAppleScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushAppleScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushBash.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushBash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushCSharp.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushCSharp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushColdFusion.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushColdFusion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushCpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushCpp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushCss.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushCss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushDelphi.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushDelphi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushDiff.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushDiff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushErlang.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushErlang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushGroovy.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushGroovy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushJScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushJScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushJava.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushJava.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushJavaFX.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushJavaFX.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPerl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPerl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPhp.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPhp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPlain.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPlain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPowerShell.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPowerShell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPython.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushPython.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushRuby.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushRuby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushSass.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushSass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushScala.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushScala.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushSql.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushSql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushVb.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushVb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushXml.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shBrushXml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shCore.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shCore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shLegacy.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/scripts/shLegacy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCore.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCore.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreDefault.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreDefault.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreDjango.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreDjango.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreEclipse.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreEclipse.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreEmacs.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreEmacs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreFadeToGrey.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreFadeToGrey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreMDUltra.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreMDUltra.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreMidnight.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreMidnight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreRDark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shCoreRDark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeDefault.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeDefault.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeDjango.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeDjango.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeEclipse.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeEclipse.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeEmacs.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeEmacs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeFadeToGrey.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeFadeToGrey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeMDUltra.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeMDUltra.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeMidnight.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeMidnight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeRDark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/Medcare Medical -doc/syntax-highlighter/styles/shThemeRDark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/_about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/_about.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/_courses.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/_courses.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/_feature.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/_feature.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/_feature.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/_feature.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/_price.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/_price.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/_price.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/_price.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/breadcrumb.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/breadcrumb.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/breadcrumb.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/breadcrumb.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/counter-up/jquery.counterup.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/counter-up/jquery.counterup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/counter-up/jquery.waypoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/counter-up/jquery.waypoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/flaticon.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/flaticon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/themify-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/themify-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/Flaticon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/Flaticon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/Flaticon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/Flaticon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/Flaticon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/Flaticon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/Flaticon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/Flaticon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/Flaticon.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/Flaticon.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/themify.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/themify.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/themify.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/themify.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/fonts/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/fonts/themify.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/background/bg1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/background/bg1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/background/bg_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/background/bg_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/background/bg_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/background/bg_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/about1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/about1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/about2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/about2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/banner-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/banner-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/home-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/home-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/pattern_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/pattern_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/shap-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/shap-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/banner/shap-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/banner/shap-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/add.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/add.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/author.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/author.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/blog1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/blog1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/blog2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/blog2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/blog3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/blog3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/c6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/c6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/cat-post/cat-post-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/cat-post/cat-post-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/cat-post/cat-post-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/cat-post/cat-post-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/cat-post/cat-post-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/cat-post/cat-post-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/causes/causes-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/causes/causes-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/causes/causes-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/causes/causes-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/causes/causes-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/causes/causes-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/feature-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/feature-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/latest-post/l-post-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/main-blog/m-blog-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/next.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/next.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/popular-post/post1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/popular-post/post1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/popular-post/post2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/popular-post/post2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/popular-post/post3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/popular-post/post3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/popular-post/post4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/popular-post/post4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/post-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/post-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/post-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/post-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/blog/prev.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/blog/prev.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/brand/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/brand/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/brand/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/brand/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/brand/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/brand/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/brand/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/brand/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/brand/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/brand/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/_DS_Store" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/_DS_Store" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/a2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/a2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/d.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/disabled-check.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/disabled-check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/disabled-radio.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/disabled-radio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/f8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/f8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/g8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/g8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/primary-check.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/primary-check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/primary-radio.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/primary-radio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/success-check.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/success-check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/success-radio.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/success-radio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/tes1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/tes1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/tex2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/tex2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/user1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/user1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/elements/user2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/elements/user2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/icon/cotation.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/icon/cotation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/icon/i1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/icon/i1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/icon/i2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/icon/i2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/icon/i3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/icon/i3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/icon/i4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/icon/i4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/icon/video-icon-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/icon/video-icon-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/instagram/widget-i1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/instagram/widget-i1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/instagram/widget-i2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/instagram/widget-i2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/instagram/widget-i3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/instagram/widget-i3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/instagram/widget-i4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/instagram/widget-i4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/instagram/widget-i5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/instagram/widget-i5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/instagram/widget-i6.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/instagram/widget-i6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/notify-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/notify-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/project/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/project/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/project/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/project/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/project/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/project/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/project/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/project/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/team/s1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/team/s1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/team/s2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/team/s2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/team/s3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/team/s3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/team/s4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/team/s4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/img/video-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/img/video-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/gmaps.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/gmaps.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/jquery-2.2.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/jquery-2.2.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/jquery.ajaxchimp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/jquery.ajaxchimp.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/jquery.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/jquery.form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/jquery.validate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/jquery.waypoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/jquery.waypoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/mail-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/mail-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/stellar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/stellar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/js/waypoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/waypoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/backup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/backup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/Flaticon.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/_flaticon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/_flaticon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/flaticon.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/flaticon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/font/flaticon.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/font/flaticon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/my-icons-collection/license/license.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/my-icons-collection/license/license.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_about.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_appointment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_appointment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_blog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_breadcrumb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_breadcrumb.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_contact.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_elements.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_elements.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_hotline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_hotline.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_predefine.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_predefine.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_services.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_services.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_team.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_team.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_testimonials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_testimonials.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/animate-css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/animate-css/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/animate-css/wow.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/animate-css/wow.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/bootstrap-datepicker/bootstrap-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/css/all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/css/all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/fontawesome/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/owl-carousel/assets/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/owl-carousel/assets/ajax-loader.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/owl-carousel/assets/animated.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/owl-carousel/assets/animated.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/owl-carousel/assets/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/owl-carousel/assets/owl.carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/owl-carousel/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/owl-carousel/owl.carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/vendors/owl-carousel/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/vendors/owl-carousel/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/manual/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/manual/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/manual/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/manual/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/manual/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/manual/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/manual/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/manual/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/manual/manual.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/manual/manual.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/css/material-dashboard.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/css/material-dashboard.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/demo/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/demo/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/demo/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/demo/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/Macbook.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/Macbook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/angular.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/angular.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/cover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/cover.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/ex1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/ex1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/ex2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/ex2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/ex3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/ex3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/faces/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/faces/avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/faces/card-profile1-square.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/faces/card-profile1-square.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/faces/card-profile2-square.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/faces/card-profile2-square.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/faces/marc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/faces/marc.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/html.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/html.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/iPad2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/iPad2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/imac1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/imac1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/iphonex.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/iphonex.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/mask.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/mask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/new_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/new_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/notification.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/notification.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/react.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/react.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/table.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/table.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/img/vue.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/img/vue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/core/bootstrap-material-design.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/core/bootstrap-material-design.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/core/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/core/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/core/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/core/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/material-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/material-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/material-dashboard.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/material-dashboard.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/arrive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/arrive.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-notify.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-notify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-selectpicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-selectpicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-tagsinput.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/bootstrap-tagsinput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/chartist.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/chartist.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/fullcalendar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/jasny-bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/jasny-bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery-jvectormap.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery-jvectormap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.bootstrap-wizard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.bootstrap-wizard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.dataTables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.tagsinput.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.tagsinput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/jquery.validate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/moment.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/moment.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/nouislider.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/nouislider.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/perfect-scrollbar.jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/perfect-scrollbar.jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/js/plugins/sweetalert2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/js/plugins/sweetalert2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_alerts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_alerts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_cards.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_checkboxes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_checkboxes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_core-bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_core-bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_example-pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_example-pages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_fixed-plugin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_fixed-plugin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_footers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_footers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_headers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_headers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_images.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_info-areas.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_info-areas.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_input-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_input-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_misc.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_popover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_popover.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_popups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_popups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_radios.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_radios.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_ripples.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_ripples.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_sidebar-and-main-panel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_sidebar-and-main-panel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_social-buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_social-buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_togglebutton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_togglebutton.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_alert.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_badge.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_breadcrumb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_button-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_button-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_carousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_close.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_close.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_code.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_code.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_custom-forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_custom-forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_images.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_input-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_input-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_jumbotron.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_jumbotron.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_popover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_popover.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_print.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_progress.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_progress.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_reboot.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_root.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_transitions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_transitions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_background-variant.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_background-variant.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_badge.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_caret.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_float.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_float.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_grid-framework.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_hover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_hover.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_nav-divider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_nav-divider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_navbar-align.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_navbar-align.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_resize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_size.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_size.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_table-row.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_table-row.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-emphasis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-emphasis.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-hide.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-hide.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_visibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/mixins/_visibility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_align.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_align.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_background.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_borders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_borders.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_clearfix.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_display.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_display.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_embed.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_embed.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_flex.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_flex.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_float.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_float.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_position.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_position.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_screenreaders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_screenreaders.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_sizing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_sizing.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_spacing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_spacing.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_visibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/bootstrap/scss/utilities/_visibility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/cards/_card-plain.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/cards/_card-plain.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/cards/_card-profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/cards/_card-profile.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/cards/_card-stats.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/cards/_card-stats.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_alert.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_breakpoints.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_chartist.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_chartist.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_colored-shadows.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_colored-shadows.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_drawer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_drawer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_hover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_hover.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_navbar-colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_navbar-colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_navs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_navs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_sidebar-color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_sidebar-color.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_transparency.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_transparency.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_vendor-prefixes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/mixins/_vendor-prefixes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/plugins/_animate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/plugins/_animate.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/plugins/_chartist.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/plugins/_chartist.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/plugins/_perfect-scrollbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/plugins/_perfect-scrollbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_body.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_bootstrap-material-design-base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_bootstrap-material-design-base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_bootstrap-material-design.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_bootstrap-material-design.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_brand.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_brand.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_code.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_code.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_colors-map.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_colors-map.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_custom-forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_custom-forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_drawer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_drawer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_modals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_modals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_shadow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_shadow.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_snackbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_snackbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_spacing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_spacing.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_state.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_state.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/assets/scss/material-dashboard/variables/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/billboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/billboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/report/billboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/report/billboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,41 +649,62 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5522388">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/graduate/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="281">
-                  <caret line="210" column="4" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="4" />
-                  <folding>
-                    <element signature="e#0#30#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/graduate/templates/graduate/report.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="10">
-                  <caret line="69" column="59" lean-forward="true" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-                  <folding>
-                    <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduate/templates/graduate/report.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11178">
+              <caret line="621" column="73" selection-start-line="621" selection-start-column="73" selection-end-line="621" selection-end-column="73" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1134">
+              <caret line="63" column="66" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#7;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduate/modules/makeTakeList.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3600">
+              <caret line="206" selection-start-line="206" selection-end-line="206" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -95,8 +717,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>TakeListPointUserName</find>
-      <find>takeListPointUserName</find>
       <find>꿈미래</find>
       <find>통합</find>
       <find>핵심교양</find>
@@ -125,6 +745,8 @@
       <find>MustDoubleMajorSelectPoint</find>
       <find>notTakeSting</find>
       <find>majorResult</find>
+      <find>so</find>
+      <find>교직</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,30 +790,30 @@
         <option value="$PROJECT_DIR$/graduate/models.py" />
         <option value="$PROJECT_DIR$/graduate/modules/checkpioneer.py" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
-        <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/graduate/modules/checkBasic.py" />
         <option value="$PROJECT_DIR$/graduate/modules/makeTakeList.py" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/register_done.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/registration/manual.html" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/register.html" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/userChange.html" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/userChange_done.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/graduate/modules/judgeData.py" />
         <option value="$PROJECT_DIR$/graduate/modules/checkDoubleMajor.py" />
-        <option value="$PROJECT_DIR$/graduate/templates/graduate/report.html" />
         <option value="$PROJECT_DIR$/graduate/views.py" />
+        <option value="$PROJECT_DIR$/accounts/templates/registration/manual.html" />
+        <option value="$PROJECT_DIR$/graduate/templates/graduate/report.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/mysite/settings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="854" />
-    <option name="y" value="-915" />
-    <option name="width" value="849" />
-    <option name="height" value="459" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="102" />
+    <option name="y" value="55" />
+    <option name="width" value="1657" />
+    <option name="height" value="995" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -208,20 +830,22 @@
             <path>
               <item name="Gnu-graduate-management" type="b2602c69:ProjectViewProjectNode" />
               <item name="Gnu-graduate-management" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="a" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Gnu-graduate-management" type="b2602c69:ProjectViewProjectNode" />
               <item name="Gnu-graduate-management" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Gnu-graduate-management" type="b2602c69:ProjectViewProjectNode" />
               <item name="Gnu-graduate-management" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gnu-graduate-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gnu-graduate-management" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -364,11 +988,15 @@
       <workItem from="1557673944031" duration="79176000" />
       <workItem from="1557848280485" duration="8594000" />
       <workItem from="1557860612826" duration="19802000" />
+      <workItem from="1557882349067" duration="6702000" />
+      <workItem from="1557920018791" duration="651000" />
+      <workItem from="1557921806107" duration="534000" />
+      <workItem from="1558251345886" duration="683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300487000" />
+    <option name="totallyTimeSpent" value="309057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,15 +1008,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="-1088" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="102" y="55" width="1657" height="995" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.108208954" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18238601" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32848233" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.44282743" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.45443788" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32952183" />
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.32952183" />
@@ -408,11 +1035,11 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.108208954" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.09605774" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32848233" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.50623703" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.41602635" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32952183" />
       <window_info anchor="bottom" id="Python Console" order="5" weight="0.32952183" />
@@ -569,13 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="132" selection-start-line="132" selection-start-column="2" selection-end-line="132" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -597,23 +1217,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graduate/modules/makeTakeList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5388">
-          <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/registration/manual.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -710,13 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="67" column="118" lean-forward="true" selection-start-line="67" selection-start-column="118" selection-end-line="67" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/registration/register_done.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -779,24 +1375,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graduate/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/registration/manual.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graduate/templates/graduate/report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="69" column="59" lean-forward="true" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
+        <state relative-caret-position="11178">
+          <caret line="621" column="73" selection-start-line="621" selection-start-column="73" selection-end-line="621" selection-end-column="73" />
           <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graduate/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="210" column="4" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="4" />
+        <state relative-caret-position="1134">
+          <caret line="63" column="66" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#7;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduate/modules/makeTakeList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3600">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
         </state>
       </provider>
     </entry>

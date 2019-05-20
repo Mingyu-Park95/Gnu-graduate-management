@@ -3356,10 +3356,6 @@ input[type="button"].btn-block {
   display: none;
 }
 
-.collapse.show {
-  display: block;
-}
-
 tr.collapse.show {
   display: table-row;
 }
@@ -4211,11 +4207,7 @@ tbody.collapse.show {
   padding-bottom: 0.5rem;
 }
 
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
-}
+
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -16398,7 +16390,7 @@ Copyright (c) 2015 Daniel Eden
 .ct-chart .ct-series-a .ct-slice-pie,
 .ct-chart .ct-series-a .ct-slice-donut-solid,
 .ct-chart .ct-series-a .ct-area {
-  stroke: #00bcd4;
+  stroke: rgba(194, 72, 72, 0.6);
 }
 
 .ct-chart .ct-series-b .ct-point,
@@ -16408,7 +16400,7 @@ Copyright (c) 2015 Daniel Eden
 .ct-chart .ct-series-b .ct-slice-pie,
 .ct-chart .ct-series-b .ct-slice-donut-solid,
 .ct-chart .ct-series-b .ct-area {
-  stroke: #f44336;
+  stroke: rgb(221, 221, 32,0.6)
 }
 
 .ct-chart .ct-series-c .ct-point,
@@ -16418,8 +16410,31 @@ Copyright (c) 2015 Daniel Eden
 .ct-chart .ct-series-c .ct-slice-pie,
 .ct-chart .ct-series-c .ct-slice-donut-solid,
 .ct-chart .ct-series-c .ct-area {
-  stroke: #ff9800;
+  stroke:rgba(128, 235, 102, 0.6);
 }
+
+
+.ct-chart .ct-series-d .ct-point,
+.ct-chart .ct-series-d .ct-line,
+.ct-chart .ct-series-d .ct-bar,
+.ct-chart .ct-series-d .ct-slice-donut,
+.ct-chart .ct-series-d .ct-slice-pie,
+.ct-chart .ct-series-d .ct-slice-donut-solid,
+.ct-chart .ct-series-d .ct-area {
+  stroke:rgba(16, 136, 235, 0.658);
+}
+
+.ct-chart .ct-series-e .ct-point,
+.ct-chart .ct-series-e .ct-line,
+.ct-chart .ct-series-e .ct-bar,
+.ct-chart .ct-series-e .ct-slice-donut,
+.ct-chart .ct-series-e .ct-slice-pie,
+.ct-chart .ct-series-e .ct-slice-donut-solid,
+.ct-chart .ct-series-e .ct-area 
+{
+  stroke:rgba(212, 207, 219, 0.6);
+}
+
 
 .ct-chart .ct-bar {
   fill: none;
@@ -16461,23 +16476,36 @@ Copyright (c) 2015 Daniel Eden
   text-align: right;
   text-anchor: end;
 }
-
+/* 도넛 색깔 */
 .ct-chart .ct-series-a .ct-slice-pie,
 .ct-chart .ct-series-a .ct-slice-donut-solid,
 .ct-chart .ct-series-a .ct-area {
-  fill: #00bcd4;
+  fill: #0099FF; 
+  
 }
 
 .ct-chart .ct-series-b .ct-slice-pie,
 .ct-chart .ct-series-b .ct-slice-donut-solid,
 .ct-chart .ct-series-b .ct-area {
-  fill: #f44336;
+  fill: #99FF66;
 }
 
 .ct-chart .ct-series-c .ct-slice-pie,
 .ct-chart .ct-series-c .ct-slice-donut-solid,
 .ct-chart .ct-series-c .ct-area {
-  fill: #ff9800;
+  fill: #FF0066;
+}
+
+.ct-chart .ct-series-d .ct-slice-pie,
+.ct-chart .ct-series-d .ct-slice-donut-solid,
+.ct-chart .ct-series-d .ct-area {
+  fill: #CCCC33;
+}
+
+.ct-chart .ct-series-e .ct-slice-pie,
+.ct-chart .ct-series-e .ct-slice-donut-solid,
+.ct-chart .ct-series-e .ct-area {
+  fill: #CC33FF;
 }
 
 /* perfect-scrollbar v0.6.13 */
@@ -16666,129 +16694,7 @@ Copyright (c) 2015 Daniel Eden
     margin: 0 auto;
     min-height: 400px;
   }
-  .navbar-collapse {
-    position: fixed;
-    display: block;
-    top: 0px;
-    height: 100vh;
-    width: 230px;
-    right: 0;
-    margin-right: 0 !important;
-    z-index: 1032;
-    visibility: visible;
-    background-color: #999;
-    overflow-y: visible;
-    border-top: none;
-    text-align: left;
-    padding-right: 0;
-    padding-left: 0;
-    max-height: none !important;
-    -webkit-transform: translate3d(230px, 0, 0);
-    -moz-transform: translate3d(230px, 0, 0);
-    -o-transform: translate3d(230px, 0, 0);
-    -ms-transform: translate3d(230px, 0, 0);
-    transform: translate3d(230px, 0, 0);
-    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  }
-  .navbar-collapse::after {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #fff;
-    display: block;
-    content: "";
-    z-index: 1;
-  }
-  .navbar-collapse .dropdown-toggle:after {
-    position: absolute;
-    right: 16px;
-    margin-top: 8px;
-  }
-  .navbar-collapse .navbar-nav {
-    position: relative;
-    z-index: 3;
-  }
-  .navbar-collapse .navbar-nav .nav-item .nav-link {
-    color: #3C4858;
-    margin: 5px 15px;
-  }
-  .navbar-collapse .navbar-nav .nav-item.button-container .nav-link {
-    margin: 15px;
-  }
-  .navbar-collapse .navbar-nav .nav-item:after {
-    width: calc(100% - 30px);
-    content: "";
-    display: block;
-    height: 1px;
-    margin-left: 15px;
-  }
-  .navbar-collapse .navbar-nav .nav-item:last-child:after {
-    display: none;
-  }
-  .nav-open .navbar-collapse {
-    -webkit-transform: translate3d(0px, 0, 0);
-    -moz-transform: translate3d(0px, 0, 0);
-    -o-transform: translate3d(0px, 0, 0);
-    -ms-transform: translate3d(0px, 0, 0);
-    transform: translate3d(0px, 0, 0);
-  }
-  .nav-open .navbar-translate {
-    -webkit-transform: translate3d(-230px, 0, 0);
-    -moz-transform: translate3d(-230px, 0, 0);
-    -o-transform: translate3d(-230px, 0, 0);
-    -ms-transform: translate3d(-230px, 0, 0);
-    transform: translate3d(-230px, 0, 0);
-  }
-  .navbar .navbar-translate {
-    width: 100%;
-    position: relative;
-    display: flex;
-    -ms-flex-pack: justify !important;
-    justify-content: space-between !important;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-transition: transform 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -moz-transition: transform 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -o-transition: transform 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -ms-transition: transform 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    transition: transform 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  }
-  .navbar .dropdown.show .dropdown-menu {
-    display: block;
-  }
-  .navbar .dropdown .dropdown-menu {
-    display: none;
-  }
-  .navbar .dropdown-menu .dropdown-item {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-  .navbar .dropdown.show .dropdown-menu,
-  .navbar .dropdown .dropdown-menu {
-    background-color: transparent;
-    border: 0;
-    padding-bottom: 15px;
-    transition: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    transform: none !important;
-    width: auto;
-    margin-bottom: 15px;
-    padding-top: 0;
-    height: 300px;
-    animation: none;
-    opacity: 1;
-    overflow-y: scroll;
-  }
-  .navbar.navbar-transparent .navbar-toggler .navbar-toggler-icon {
-    background-color: #fff;
-  }
+ 
   #bodyClick {
     height: 100%;
     width: 100%;
@@ -17082,19 +16988,15 @@ Copyright (c) 2015 Daniel Eden
   .off-canvas-sidebar .navbar .container {
     transform: none;
   }
-  .main-panel,
-  .navbar-collapse {
+  .main-panel
+   {
     -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
-  .navbar .navbar-collapse.collapse,
-  .navbar .navbar-collapse.collapse.in,
-  .navbar .navbar-collapse.collapsing {
-    display: none !important;
-  }
+ 
   .off-canvas-sidebar .navbar .navbar-collapse.collapse,
   .off-canvas-sidebar .navbar .navbar-collapse.collapse.in,
   .off-canvas-sidebar .navbar .navbar-collapse.collapsing {
@@ -17586,9 +17488,7 @@ Copyright (c) 2015 Daniel Eden
   .navbar-collapse.collapse {
     height: 100% !important;
   }
-  .navbar-collapse.collapse.in {
-    display: block;
-  }
+  
   .navbar-header .collapse,
   .navbar-toggle {
     display: block !important;
